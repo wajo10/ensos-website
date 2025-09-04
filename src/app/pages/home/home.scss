@@ -7,6 +7,17 @@
 .background{
   background: url('/img/home/background.jpeg') no-repeat center center fixed;
   background-size: cover;
+
+}
+
+.left-logo{
+  width: 100%;
+  height: auto;
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 126px;
 }
 
 

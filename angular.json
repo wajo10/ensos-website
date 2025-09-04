@@ -27,8 +27,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "/fonts/Lato/Lato.css"
+              "src/styles.scss"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",

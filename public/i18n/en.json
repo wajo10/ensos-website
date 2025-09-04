@@ -1,3 +1,8 @@
 {
-
+  "navbar": {
+    "about-us": "About Us",
+    "contact": "Contact",
+    "menu": "Menu",
+    "reservations": "Reservations"
+  }
 }
