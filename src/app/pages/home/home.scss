@@ -1,0 +1,18 @@
+.section{
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+.background{
+  background: url('/img/home/background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+@media (max-width: 768px) {
+  .background{
+    background: url('/img/home/background-mobile.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,127 @@
+:host {
+  position: fixed; /* overlay: no ocupa espacio del flujo de la página */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav {
+  padding: 33px 75px; /* márgenes superior/inferior y laterales */
+  background: transparent;
+  transition: background-color 200ms ease, backdrop-filter 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+:host.scrolled .nav {
+  //background: rgba(0, 0, 0, 0.35); /* translúcido al hacer scroll */
+  //backdrop-filter: saturate(140%) blur(8px);
+  //border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  //box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.nav-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* izquierda | centro | derecha */
+  align-items: center;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* separación entre botones */
+}
+
+.nav-right {
+  justify-content: flex-end; /* que la hamburguesa quede al extremo derecho */
+  position: relative; /* ancla del dropdown */
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-logo img {
+  display: block;
+  width: 118px;
+  height: 66px;
+  object-fit: contain;
+}
+
+/* Botones estilo texto */
+.nav-link {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 150ms ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+.nav-link:hover,
+.nav-link:focus {
+  opacity: 1;
+}
+
+/* Hamburguesa */
+.hamburger {
+  background: transparent;
+  border: none;
+  width: 17px;
+  height: 7px;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hamburger span {
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0; /* pegado a la derecha del grupo */
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.dropdown-item {
+  display: block;
+  padding: 10px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: Lato, sans-serif;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive: ajustar márgenes en pantallas pequeñas */
+@media (max-width: 900px) {
+  .nav {
+    padding: 20px 24px;
+  }
+}

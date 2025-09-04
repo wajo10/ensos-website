@@ -1,0 +1,25 @@
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <!-- Izquierda -->
+    <div class="nav-left">
+      <a class="nav-link" routerLink="/about">About Us</a>
+      <a class="nav-link" routerLink="/contact">Contact</a>
+    </div>
+
+    <!-- Centro -->
+    <div class="nav-center">
+      <a class="nav-logo" routerLink="/">
+        <img ngSrc="img/logo.png" alt="Logo" width="118" height="66" />
+      </a>
+    </div>
+
+    <!-- Derecha (orden desde la derecha hacia la izquierda) -->
+    <div class="nav-right">
+      <a class="nav-link" routerLink="/menu">Menu</a>
+      <a class="nav-link" routerLink="/reservations">Reservations</a>
+      <button class="hamburger" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
