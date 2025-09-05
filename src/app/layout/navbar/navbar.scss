@@ -79,14 +79,14 @@
   background: transparent;
   border: none;
   width: 17px;
-  height: 7px;
+  height: 12px;
   position: relative;
   cursor: pointer;
   padding: 0;
   color: white;
-  display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  display: none;
 }
 
 .hamburger span {
@@ -126,6 +126,22 @@
 /* Responsive: ajustar márgenes en pantallas pequeñas */
 @media (max-width: 900px) {
   .nav {
-    padding: 20px 24px;
+    padding: 20px 24px 20px 0;
+  }
+  .nav-inner{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hamburger{
+    display: flex;
+  }
+  .nav-link, .nav-left{
+    display: none;
+  }
+  .nav-center {
+    display: flex;
+    justify-content: left;
   }
 }

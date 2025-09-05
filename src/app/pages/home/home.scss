@@ -1,16 +1,16 @@
 .section{
+  position: relative;
   height: 100vh;
   display: flex;
   width: 100%;
 }
 
 .background{
-  background: url('/img/home/background.jpeg') no-repeat center center fixed;
+  background: url('/img/home/background.png') no-repeat center center fixed;
   background-size: cover;
-
 }
 
-.left-logo{
+.right-logo{
   width: 100%;
   height: auto;
   position: sticky;
@@ -18,12 +18,228 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 126px;
+  z-index: 1;
 }
 
+.grid-section{
+  background: var(--white-500);
+  height: 987px;
 
-@media (max-width: 768px) {
+  /* Variables de layout de líneas */
+  --line-top: 97px;
+  --line-bottom: 80px;
+  --line-right: 72px;
+  --line-center: 715px;
+
+  /* Centro geométrico (desktop) */
+  --yTop: var(--line-top);
+  --yBottom: calc(100% - var(--line-bottom));
+  --cy: calc((var(--yTop) + var(--yBottom)) / 2);
+
+  --xLeft: calc(100% - var(--line-center));
+  --xRight: calc(100% - var(--line-right));
+  --cx: calc((var(--xLeft) + var(--xRight)) / 2);
+}
+
+/* Overlay líneas */
+.grid-lines{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Trazo base */
+.line{
+  position: absolute;
+  background: var(--gold-500);
+}
+
+/* Líneas */
+.line-top{
+  top: var(--line-top);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.line-bottom{
+  bottom: var(--line-bottom);
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.line-right{
+  top: 0;
+  bottom: 0;
+  right: var(--line-right);
+  width: 2px;
+}
+
+.line-center{
+  top: 0;
+  bottom: 0;
+  right: calc(var(--line-center) - 1px);
+  width: 2px;
+}
+
+/* Texto (desktop) */
+.grid-copy{
+  position: absolute;
+  left: 75px;
+  top: calc(var(--line-top) + 76px);
+  z-index: 2;
+}
+
+.grid-title{
+  max-width: 451px;
+  margin: 0 0 48px 0;
+}
+
+.grid-sub{
+  max-width: 423px;
+  margin: 0;
+}
+
+.book-button{
+  margin-top: 36px;
+}
+
+/* Imagen (desktop absoluta centrada por líneas) */
+.grid-image{
+  position: absolute;
+  left: var(--cx);
+  top: var(--cy);
+  width: 498px;
+  height: 604px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grid-image--mobile{ display: none; }
+br.mobile{
+  display: none;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  br.mobile{
+    display: block;
+  }
   .background{
     background: url('/img/home/background-mobile.jpg') no-repeat center center fixed;
     background-size: cover;
+  }
+
+  .right-logo{
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 0;
+    z-index: 1;
+
+    img{
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  .grid-section{
+    /* Rectángulo completo ya definido por estas líneas */
+    --line-top: 25px;
+    --line-bottom: 25px;
+    --line-right: 27px;
+    --line-center: 27px;
+
+
+    --yTop: var(--line-top);
+    --yBottom: calc(100% - var(--line-bottom));
+    --cy: calc((var(--yTop) + var(--yBottom)) / 2);
+
+    --xLeft: calc(100% - var(--line-center));
+    --xRight: calc(100% - var(--line-right));
+    --cx: calc((var(--xLeft) + var(--xRight)) / 2);
+
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 57px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Línea central en móviles va por la izquierda con offset */
+  .line-center{
+    top: 0;
+    bottom: 0;
+    left: var(--line-center);
+    right: auto;
+    width: 2px;
+  }
+
+  .grid-copy{
+    position: static;
+    left: auto;
+    top: auto;
+    margin: calc(var(--line-top) + 26px) 24px 0 24px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-title{
+    max-width: 100%;
+    margin: 0 0 24px 0;
+  }
+
+  /* Imagen en flujo, centrada y con tamaño móvil solicitado */
+  .grid-image{ display: none; }
+  .grid-image--mobile{
+    display: block;
+    width: 286px;
+    height: auto;
+    transform: none;
+    pointer-events: auto;
+    margin: 0 auto 49px;
+  }
+  .grid-sub{
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
+  .book-button{
+    margin-top: 24px;
+  }
+
+  h1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  .grid-title{
+    max-width: 286px;
+    margin-bottom: 49px;
+  }
+
+  p{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .grid-sub{
+    max-width: 263px;
+  }
+
+  .book-button{
+    padding: 9px 30px;
+    max-width: 156px;
   }
 }
