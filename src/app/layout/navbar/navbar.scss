@@ -1,22 +1,25 @@
 :host {
-  position: fixed; /* overlay: no ocupa espacio del flujo de la página */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  inset: 0 0 auto 0;
   z-index: 1000;
 }
 
 .nav {
   padding: 33px 75px; /* márgenes superior/inferior y laterales */
   background: transparent;
-  transition: background-color 200ms ease, backdrop-filter 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  transition: background-color .2s, color .2s; ;
 }
 
-:host.scrolled .nav {
-  //background: rgba(0, 0, 0, 0.35); /* translúcido al hacer scroll */
-  //backdrop-filter: saturate(140%) blur(8px);
-  //border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  //box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+:host.dark .nav {
+  color: #fff;
+  background: rgba(0,0,0,0.35);
+}
+
+:host.light .nav {
+  color: #111;
 }
 
 .nav-inner {
