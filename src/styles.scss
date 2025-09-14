@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p{
   margin: 0;
 }
 
-h1{
+h2{
   font-family: Cormorant, sans-serif;
   font-size: 45px;
   font-style: normal;
@@ -23,6 +23,10 @@ h1{
   line-height: 120%;
   color: var(--gold-800);
   margin: 0;
+}
+
+h2.black{
+  color: var(--gold-500);
 }
 
 p{

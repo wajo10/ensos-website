@@ -20,7 +20,6 @@ export class Navbar implements OnDestroy{
   private sub: Subscription;
   constructor(theme: NavThemeService) {
     this.sub = theme.theme$.subscribe(t => {
-      console.debug('[Navbar] theme$', t);
       this.isDark = (t === 'dark');
       this.isLight = (t === 'light');
     });

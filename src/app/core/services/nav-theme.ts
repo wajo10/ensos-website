@@ -10,6 +10,5 @@ export class NavThemeService {
 
   setTheme(theme: NavTheme) {
     this._theme$.next(theme);
-    console.log(theme);
   }
 }

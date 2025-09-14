@@ -4,5 +4,17 @@
     "contact": "Contact",
     "menu": "Menu",
     "reservations": "Reservations"
+  },
+  "home" : {
+    "grid-section": {
+      "title": "Where Japanese precision, Peruvian soul, and Costa Rican essence converge.",
+      "body": "Welcome to Ensō. <br class=\"mobile\"><br class=\"mobile\"> A celebration of Nikkei mastery in the heart of Escazú, Costa Rica. <br><br>\n      Inspired by the Costa Rican terroir and the true essence found in the simplicity yet magnificence of <i>nature</i>, our chefs craft a one-of-a-kind\n      tasting menu. <br><br>\n      Blending Japanese precision with Peruvian soul and Costa Rican biodiversity, we honor the legacy of Nikkei cuisine while carrying it forward with our own vision.",
+      "button": "Book the experience"
+    },
+    "black-section": {
+      "title": "Imagine experiencing a country from the inside out — where the beauty of our tropical paradise can be tasted.",
+      "body": "From fresh, ethically sourced fish from Guanacaste to locally farmed produce, every product is chosen for its narrative as much as its quality. Sustainability isnʼt an option — itʼs a responsibility. And flavor is only the beginning.",
+      "button": "View the Menu"
+    }
   }
 }

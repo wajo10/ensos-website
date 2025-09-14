@@ -123,6 +123,66 @@ br.mobile{
   display: none;
 }
 
+
+/* ====== BLACK SECTION ====== */
+.black-section{
+  background: var(--black-600);
+}
+.black-section-content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.text{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+h2.black.title{
+  margin-top: 143px;
+  margin-left: 72px;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 54px */
+  max-width: 507px;
+}
+
+.button-and-text{
+  margin-left: 72px;
+  margin-bottom: 91px;
+}
+
+.book-button.black{
+  margin-top: 45px;
+  padding: 14px 30px;
+}
+
+p.sub.black{
+  color: var(--white-500);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 411px;
+}
+
+.black-img-container{
+  margin-right: 72px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 55%;
+  text-align: right;
+  img{
+    width: auto;
+    height: 100%;
+  }
+}
+
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
   br.mobile{
@@ -214,7 +274,7 @@ br.mobile{
     margin-top: 24px;
   }
 
-  h1{
+  h2{
     font-size: 28px;
     font-style: normal;
     font-weight: 400;

@@ -4,5 +4,17 @@
     "contact": "Contacto",
     "menu": "Menú",
     "reservations": "Reservaciones"
+  },
+  "home" : {
+    "grid-section": {
+      "title": "Donde convergen la precisión japonesa, el alma peruana y la esencia costarricense.",
+      "body": "Bienvenido a Ensō. <br class=\"mobile\"><br class=\"mobile\"> Una celebración de la maestría nikkei en el corazón de Escazú, Costa Rica. <br><br>      Inspirados por el terruño costarricense y la verdadera esencia que se encuentra en la simplicidad y magnificencia de la <i>naturaleza</i>, nuestros chefs elaboran un menú degustación único. <br><br>   Combinando la precisión japonesa con el alma peruana y la biodiversidad costarricense, honramos el legado de la cocina nikkei y lo llevamos adelante con nuestra propia visión.",
+      "button": "Reserva la experiencia"
+    },
+    "black-section": {
+      "title": "Imagina experimentar un país desde dentro, donde se puede saborear la belleza de nuestro paraíso tropical.",
+      "body": "Desde pescado fresco y de origen ético procedente de Guanacaste hasta productos cultivados localmente, cada producto se elige tanto por su historia como por su calidad. La sostenibilidad no es una opción, es una responsabilidad. Y el sabor es solo el principio.",
+      "button": "Ver el menú"
+    }
   }
 }

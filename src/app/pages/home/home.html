@@ -1,12 +1,12 @@
 
-<div class="section background" navTheme="light" [navThemeDebug]="true">
+<div class="section background" navTheme="light">
   <div class="right-logo">
     <img ngSrc="img/home/logo-horizontal-rings.png" height="520" width="520" alt="Logo" priority>
   </div>
 </div>
 
 
-<div class="section grid-section" navTheme="dark" [navThemeDebug]="true">
+<div class="section grid-section" navTheme="dark">
   <div class="grid-lines" aria-hidden="true">
     <div class="line line-top"></div>
     <div class="line line-bottom"></div>
@@ -24,9 +24,9 @@
 
 
   <div class="grid-copy">
-    <h1 class="grid-title">
-      Where Japanese precision, Peruvian soul, and Costa Rican essence converge.
-    </h1>
+    <h2 class="grid-title">
+      {{ "home.grid-section.title" | translate}}
+    </h2>
 
     <img
       class="grid-image--mobile"
@@ -36,22 +36,35 @@
       alt="Platillo Nikkei"
     >
 
-    <p class="grid-sub">
-      Welcome to Ensō. <br class="mobile"><br class="mobile"> A celebration of Nikkei mastery in the heart of Escazú, Costa Rica. <br><br>
-      Inspired by the Costa Rican terroir and the true essence found in the simplicity yet magnificence of <i>nature</i>, our chefs craft a one-of-a-kind
-      tasting menu. <br><br>
-      Blending Japanese precision with Peruvian soul and Costa Rican biodiversity, we honor the legacy of Nikkei cuisine while carrying it forward with our own vision.
+    <p class="grid-sub" [innerHTML]="'home.grid-section.body' | translate">
     </p>
 
     <button class="golden book-button">
-      Book the experience
+      {{ "home.grid-section.button" | translate}}
     </button>
   </div>
 
 </div >
 
-<div class="section background" navTheme="light" [navThemeDebug]="true">
-  <div class="right-logo">
-    <img ngSrc="img/home/logo-horizontal-rings.png" height="520" width="520" alt="Logo" priority>
+<div class="section black-section" navTheme="light">
+  <div class="black-section-content">
+    <div class="text">
+      <h2 class="black title">{{"home.black-section.title" | translate}}</h2>
+      <div class="button-and-text">
+        <p class="sub black">{{"home.black-section.body" | translate}}</p>
+        <button class="golden book-button black">
+          {{"home.black-section.button" | translate}}
+        </button>
+      </div>
+    </div>
+    <div class="black-img-container">
+      <img
+        src="/img/section3/img-3.png"
+        alt="Platillo Nikkei"
+      >
+    </div>
   </div>
+
 </div>
+
+
