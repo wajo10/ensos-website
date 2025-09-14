@@ -5,7 +5,6 @@
   </div>
 </div>
 
-
 <div class="section grid-section" navTheme="dark">
   <div class="grid-lines" aria-hidden="true">
     <div class="line line-top"></div>
@@ -89,6 +88,27 @@
     </div>
   </div>
 
+</div>
+
+<div class="section black-section section-4" navTheme="light">
+  <h2 class="black title section-4--mobile">{{ "home.section-4.title" | translate }}</h2>
+  <div class="header-image-container">
+    <img
+      class="header-image"
+      ngSrc="/img/section4/img-7.jpg"
+      alt="Estructura japonesa"
+      width="1206"
+      height="431"
+    priority>
+  </div>
+  <h2 class="black title section-4">{{ "home.section-4.title" | translate }}</h2>
+  <div class="section-4-text-container">
+    <p class="sub black section-4" [innerHTML]="('home.section-4.body-1' | translate)"></p>
+    <p class="sub black section-4" [innerHTML]="('home.section-4.body-2' | translate)"></p>
+  </div>
+  <button class="golden section-4">
+    {{ "home.section-4.button" | translate }}
+  </button>
 </div>
 
 
