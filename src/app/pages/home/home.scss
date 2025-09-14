@@ -182,6 +182,10 @@ p.sub.black{
   }
 }
 
+.black-img-container--mobile{
+  display: none;
+}
+
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
@@ -301,5 +305,64 @@ p.sub.black{
   .book-button{
     padding: 9px 30px;
     max-width: 156px;
+  }
+
+  /* Black section responsive */
+  .black-section{
+    min-height: 100vh;
+  }
+  .black-section-content{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+  }
+  .text{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  h2.black.title{
+    margin: 40px 65px 0 65px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 263px;
+    text-align: left;
+  }
+  .black-img-container--mobile{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 66px 53px;
+
+    img{
+      width: 286px;
+      height: auto;
+    }
+  }
+  .black-img-container{
+    display: none;
+  }
+  .button-and-text{
+    margin-left:0;
+    margin-bottom: 40px;
+  }
+  p.sub.black{
+    width:266px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .book-button.black{
+    margin-top: 34px;
+    padding: 16px 30px;
+    max-width: 156px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }
