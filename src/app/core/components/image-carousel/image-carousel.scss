@@ -3,7 +3,7 @@
 .carousel {
   position: relative;
   overflow: hidden;
-  height: calc(100vh - 100px);
+  height: calc(100vh - var(--carousel-margin));
   border-radius: 16px;
   background: #000;
 }
@@ -63,4 +63,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .track { transition: none; }
+}
+
+@media (max-width: 900px) {
+  .carousel {
+    width: auto;
+    height: var(--carousel-h);
+  }
 }

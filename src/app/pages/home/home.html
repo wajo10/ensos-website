@@ -51,10 +51,19 @@
     <div class="text">
       <h2 class="black title">{{"home.black-section.title" | translate}}</h2>
       <div class="black-img-container--mobile">
-        <img
-          src="/img/section3/img-3.png"
-          alt="Platillo Nikkei"
-        >
+        <app-image-carousel
+          [images]="[
+    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-5.jpg', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-6.jpg', alt: 'Nigiri de salmón' }
+  ]"
+          [autoplay]="true"
+          [interval]="4000"
+          [pauseOnHover]="true"
+          [loop]="true"
+          [height]="35">
+        </app-image-carousel>
       </div>
       <div class="button-and-text">
         <p class="sub black">{{"home.black-section.body" | translate}}<br><br></p>
@@ -67,14 +76,15 @@
       <app-image-carousel
         [images]="[
     { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' }
+    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-5.jpg', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-6.jpg', alt: 'Nigiri de salmón' }
   ]"
         [autoplay]="true"
         [interval]="4000"
         [pauseOnHover]="true"
         [loop]="true"
-        [height]="520">
+        [margin]="100">
       </app-image-carousel>
     </div>
   </div>

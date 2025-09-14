@@ -24,9 +24,8 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
   @Input() pauseOnHover = true;
   @Input() startIndex = 0;
   @Input() loop = true;
-
-  // Estilo rápido: alto fijo (puedes ajustarlo o usar aspect-ratio en CSS)
   @Input() height = 420; // px
+  @Input() margin = 100;  // px
 
   @HostBinding('attr.role') role = 'region';
   @HostBinding('attr.aria-roledescription') rd = 'carousel';
