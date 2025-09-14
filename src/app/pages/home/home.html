@@ -64,10 +64,18 @@
       </div>
     </div>
     <div class="black-img-container">
-      <img
-        src="/img/section3/img-3.png"
-        alt="Platillo Nikkei"
-      >
+      <app-image-carousel
+        [images]="[
+    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' }
+  ]"
+        [autoplay]="true"
+        [interval]="4000"
+        [pauseOnHover]="true"
+        [loop]="true"
+        [height]="520">
+      </app-image-carousel>
     </div>
   </div>
 

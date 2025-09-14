@@ -1,0 +1,37 @@
+<div class="carousel"
+     [style.--carousel-h.px]="height"
+     (mouseenter)="onMouseEnter()"
+     (mouseleave)="onMouseLeave()"
+     aria-live="off">
+
+  <!-- Pista -->
+  <div class="track" [style.transform]="'translate3d(' + (-100 * current) + '%, 0, 0)'">
+    <figure class="slide" *ngFor="let img of images; let i = index" [attr.aria-hidden]="i !== current">
+      <img
+        [ngSrc]="img.src"
+        [attr.width]="img.width || '100%'"
+        [attr.height]="img.height || '100%'"
+        [alt]="img.alt"
+        loading="lazy"
+        decoding="async"
+        class="slide-img"
+        fill/>
+    </figure>
+  </div>
+
+  <!-- Indicadores laterales (verticales a la derecha) -->
+  <div class="indicators" role="tablist" aria-label="slides">
+    <button
+      *ngFor="let _ of images; let i = index"
+      class="dot"
+      type="button"
+      role="tab"
+      [attr.aria-selected]="i === current"
+      [attr.aria-current]="i === current"
+      [class.active]="i === current"
+      (click)="goTo(i)"
+      [attr.aria-label]="'Go to slide ' + (i + 1)">
+    </button>
+  </div>
+
+</div>
