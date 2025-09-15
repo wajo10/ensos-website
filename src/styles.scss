@@ -6,6 +6,7 @@ body{
 html{
   --gold-400: #D3A841;
   --gold-500: #C89211;
+  --gold-700: #8E680C;
   --gold-800: #6E5009;;
   --white-500: #F7F5F0;
   --black-600: #000000;
@@ -55,4 +56,29 @@ button.golden{
   border: none;
   cursor: pointer;
   transition: background-color 150ms ease;
+}
+
+button.golden:hover{
+  background: var(--gold-700);
+  color: var(--white-500);
+}
+
+button.transparent{
+  background: transparent;
+  color: var(--black-600);
+  border: 1px solid var(--gold-700);
+  padding: 14px 50px;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+button.transparent:hover{
+  background: var(--gold-700);
+  color: var(--white-500);
 }

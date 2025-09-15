@@ -186,7 +186,7 @@ p.sub.black{
   display: none;
 }
 
-/* ====== SECTION 3 ====== */
+/* ====== SECTION 4 ====== */
 
 .black-section.section-4{
   flex-direction: column;
@@ -232,6 +232,91 @@ button.golden.section-4{
   margin-top: 0;
   margin-bottom: 87px;
   padding: 14px 48px;
+}
+
+/* ====== SECTION 5 ====== */
+.section-5{
+  background: var(--white-500);
+
+  /* Distance between vertical lines */
+  --gap-section-5: 60%;
+
+  /* Margins */
+  --line-top-section-5: 64px;
+  --line-bottom-section-5: 64px;
+
+  /* Offsets */
+  --offset-side-section-5: calc((100% - var(--gap-section-5)) / 2);
+
+  /* Geometric center */
+     --cy-section-5: calc((var(--line-top-section-5) + (100% - var(--line-bottom-section-5))) / 2);
+     --cx-section-5: 50%;
+}
+
+.grid-lines-section-5{
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.line{
+  position: absolute;
+  background: var(--gold-500);
+}
+
+/* Horizontal lines */
+.line-top-section-5{
+  top: var(--line-top-section-5);
+  left: 0; right: 0; height: 2px;
+}
+.line-bottom-section-5{
+  bottom: var(--line-bottom-section-5);
+  left: 0; right: 0; height: 2px;
+}
+
+/* Vertical (leaving 60% of the screen) */
+.line-left-section-5{
+  top: 0; bottom: 0;
+  left: var(--offset-side-section-5);
+  width: 2px;
+}
+.line-right-section-5{
+  top: 0; bottom: 0;
+  right: var(--offset-side-section-5);
+  width: 2px;
+}
+
+/* Content inside lines */
+.section-5__content{
+  position: relative;
+  z-index: 1;
+  width: var(--gap-section-5);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2.grid-title.section-5{
+  text-align: center;
+  max-width: 449px;;
+  margin: 0 0 50px 0
+}
+
+p.grid-sub.section-5{
+  text-align: center;
+  max-width: 537px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 30px 0;
+}
+
+.img-container-section-5{
+  display: none;
 }
 
 
@@ -436,5 +521,44 @@ button.golden.section-4{
     br.desktop{
       display: none;
     }
+  }
+
+  /** Section 5 responsive **/
+  .section-5 {
+    --gap-section-5: 86%;
+    --line-top-section-5: 28px;
+    --line-bottom-section-5: 28px;
+    height: max-content;
+    min-height: max-content;
+  }
+
+  .section-5__content{
+    padding-top: 75px;
+    justify-content: flex-start;
+  }
+
+  h2.grid-title.section-5{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 286px;
+    margin: 0 0 54px 0;
+  }
+
+  .img-container-section-5{
+    display: block;
+    margin-bottom: 54px;
+  }
+  p.grid-sub.section-5{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 270px;
+    margin-bottom: 26px;
+  }
+  button.transparent.section-5{
+    margin-bottom: 58px;
   }
 }
