@@ -120,9 +120,7 @@
   </div>
 
   <div class="section-5__content">
-    <h2 class="grid-title section-5">
-      Not Just a Restaurant, But a <i>Curated Collective</i>.
-    </h2>
+    <h2 class="grid-title section-5" [innerHTML]="('home.section-5.title' | translate)"></h2>
     <div class="img-container-section-5">
       <img
         class="image section-5"
@@ -132,9 +130,8 @@
         alt="Platillo Nikkei"
       >
     </div>
-    <p class="grid-sub section-5">From international Nikkei chefs, sommeliers, experience designers, and local farmers who live and breathe Nikkei philosophy,  weʼve built a team that goes beyond
-      culinary excellence.<br/><br/></p>
-    <button class="transparent section-5">Plan your visit</button>
+    <p class="grid-sub section-5" [innerHTML]="('home.section-5.body' | translate)"></p>
+    <button class="transparent section-5">{{'home.section-5.button' | translate}}</button>
   </div>
 </div>
 
