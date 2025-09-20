@@ -78,7 +78,18 @@ button.transparent{
   transition: background-color 150ms ease;
 }
 
+button.transparent.black{
+  color: var(--white-500);
+}
+
 button.transparent:hover{
   background: var(--gold-700);
   color: var(--white-500);
 }
+
+button.transparent.black:hover{
+  background: var(--white-500);
+  color: var(--black-600);
+}
+
+

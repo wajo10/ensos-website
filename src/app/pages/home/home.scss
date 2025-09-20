@@ -319,6 +319,80 @@ p.grid-sub.section-5{
   display: none;
 }
 
+/* ====== Section 6 ====== */
+.section.section-6{
+  background: var(--black-600);
+  min-height: max-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 47px 0;
+}
+.sub-section{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.sub-section.inverse{
+  margin-top: 162px;
+  flex-direction: row-reverse;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+}
+
+h2.black.title.section-6.italic{
+  color: var(--gold-500);
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 609px;
+  margin: 0;
+}
+
+p.sub.black.section-6{
+  color: var(--white-500);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p.chef-name{
+  text-transform: uppercase;
+}
+
+p.chef-title{
+  margin-bottom: 78px
+}
+
+p.paragraph.section-6{
+  max-width: 462px !important;
+}
+
+img.image.section-6{
+  text-align: right;
+  margin-right: 57px;
+}
+
+button.section-6{
+  padding: 14px 57px;
+  margin-top: 75px;
+}
+
+
+
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 900px) {
