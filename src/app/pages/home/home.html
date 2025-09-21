@@ -138,37 +138,51 @@
 <div class="section black-section section-6" navTheme="light">
   <div class="sub-section">
     <div class="column">
-      <h2 class="black title section-6 italic" style="margin-bottom:55px">{{"home.section-6.title-1" | translate}}</h2>
+      <h2 class="black title section-6 italic desktop" style="margin-bottom:55px">{{"home.section-6.title-1" | translate}}</h2>
       <p class="sub black section-6 chef-name">Sergio Nakamura</p>
       <p class="sub black section-6 chef-title">Creative Chef</p>
-      <p class="sub black section-6 paragraph">{{"home.section-6.body-1" | translate}}</p>
+      <p class="sub black section-6 paragraph body">{{"home.section-6.body-1" | translate}}</p>
     </div>
     <div class="column">
       <img
-        class="image section-6"
+        class="image section-6 chef"
         ngSrc="/img/section6/img-12.jpg"
         width="357"
         height="405"
         alt="Chef Sergio Nakamura"
       >
     </div>
+    <h2 class="black title section-6 italic --mobile" style="max-width: 278px">{{"home.section-6.title-1" | translate}}</h2>
+    <button class="transparent black section-6 --mobile">Contact Us</button>
+
+    <img
+      class="image section-6 divider --mobile"
+      ngSrc="/img/rings.png"
+      width="20"
+      height="19"
+      alt="rings logo"
+    >
+
   </div>
   <div class="sub-section inverse">
     <div class="column">
-      <h2 class="black title section-6 italic" style="margin-bottom:82px; max-width: 511px" [innerHTML]="('home.section-6.title-2' | translate)"></h2>
+      <h2 class="black title section-6 italic desktop" style="margin-bottom:82px; max-width: 511px" [innerHTML]="('home.section-6.title-2' | translate)"></h2>
       <p class="sub black section-6 chef-name">Carlos Gamboa</p>
       <p class="sub black section-6 chef-title">Head Chef</p>
-      <p class="sub black section-6 paragraph">{{"home.section-6.body-2" | translate}}</p>
-      <button class="transparent black section-6">Reserve now</button>
+      <p class="sub black section-6 paragraph body">{{"home.section-6.body-2" | translate}}</p>
+      <button class="transparent black section-6 desktop">Reserve now</button>
     </div>
     <div class="column">
       <img
-        class="image section-6"
+        class="image section-6 chef"
         ngSrc="/img/section6/img-13.png"
         width="357"
         height="405"
-        alt="Chef Sergio Nakamura"
+        alt="Chef Carlos Gamboa"
       >
+
+      <h2 class="black title section-6 italic --mobile" style="max-width: 242px" [innerHTML]="('home.section-6.title-2' | translate)"></h2>
+      <button class="transparent black section-6 --mobile">Reserve now</button>
     </div>
   </div>
 </div>

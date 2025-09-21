@@ -391,6 +391,10 @@ button.section-6{
   margin-top: 75px;
 }
 
+.--mobile{
+  display: none;
+}
+
 
 
 
@@ -638,4 +642,63 @@ button.section-6{
   button.transparent.section-5{
     margin-bottom: 58px;
   }
+
+  /* Section 6 responsive */
+  .sub-section{
+    flex-direction: column;
+    margin: 0 0 0 53px;
+    width: auto!important;
+    align-items: flex-start;
+  }
+
+  .sub-section.inverse{
+    flex-direction: column;
+    margin: 0 0 0 53px;
+    align-items: flex-start;
+  }
+
+  .section-6.desktop{
+    display: none;
+  }
+
+  p.section-6{
+    font-size: 15px !important;
+  }
+
+  p.section-6.paragraph{
+    margin-bottom: 40px;
+  }
+
+  p.section-6.chef-title{
+    margin-bottom: 28px;
+  }
+
+  p.section-6.paragraph.body{
+    max-width: 228px !important;
+  }
+
+  img.chef.section-6{
+    width: 195px;
+    height: auto;
+  }
+
+  img.divider.section-6{
+    margin: 40px 0 31px 0;
+  }
+
+  .section-6.--mobile{
+    display: block;
+  }
+
+  h2.section-6.--mobile{
+    font-size: 20px !important;
+    margin: 32px 0  !important;
+  }
+
+  button.section-6.--mobile{
+    margin: 0;
+    font-size: 12px;
+    padding: 16px 30px;
+  }
+
 }
