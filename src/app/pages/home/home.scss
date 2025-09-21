@@ -533,6 +533,28 @@ button.section-8.golden{
   display: none;
 }
 
+/* ====== Section 9 ====== */
+
+.section.section-9{
+  height: 70vh;
+  background: url('/img/section9/background.jpg') no-repeat center center fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3.section-9.title{
+  font-size: 45px;
+  line-height: 120%;
+  width: 449px;
+  text-align: center;
+}
+
+button.section-9.transparent.white-border{
+  margin-top: 75px;
+  padding: 14px 58px;
+}
 
 
 /* ====== RESPONSIVE ====== */
@@ -973,6 +995,21 @@ button.section-8.golden{
     font-size: 15px;
     max-width: 270px;
     text-align: center;
+  }
+
+  /* Section 9 responsive */
+  .section.section-9{
+    height: 434px;
+  }
+  h3.section-9.title{
+    font-size: 28px;
+    line-height: normal;
+    max-width: 323px;
+  }
+
+  button.section-9.transparent.white-border{
+    margin-top: 57px;
+    padding: 14px 25px;
   }
 
 }
