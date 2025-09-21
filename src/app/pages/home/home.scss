@@ -467,6 +467,10 @@ button.section-7.golden{
   margin-top: 45px
 }
 
+.section-7.--mobile{
+  display: none;
+}
+
 
 
 
@@ -771,6 +775,94 @@ button.section-7.golden{
     margin: 0;
     font-size: 12px;
     padding: 16px 30px;
+  }
+
+  /* Section 7 responsive */
+  .section.section-7{
+    min-height: auto;
+    height: auto;
+  }
+
+  .overlay{
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .section-7.container{
+    height: auto;
+  }
+
+  h2.section-7{
+    max-width: 270px;
+    margin-top: 78px;
+  }
+
+  h3.subtitle.section-7{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  img.section-7.divider{
+    margin-top: 70px;
+    width: 50px;
+    height: 49px;
+  }
+
+  .paragraph.section-7{
+    margin-top: 65px;
+  }
+  p.sub.black.body.section-7{
+    text-align: center !important;
+    max-width: 286px;
+    width: 286px;
+  }
+
+  .crane-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: -100px;
+  }
+
+  .crane{
+    position: inherit;
+    width: 447px;
+    height: 428px;
+    left:-54px
+  }
+
+  .crane-2.--mobile{
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 180px;
+    background: transparent url('/img/section7/crane-02.png') no-repeat right;
+    background-size: contain;
+    width: 224px;
+    height: 200px;
+    z-index: 1;
+  }
+
+  .right-text.section-7{
+    position: static;
+    text-align: center !important;
+    max-width: 265px;
+    margin-top: 40px;
+    margin-bottom: 60px
+  }
+
+  h3.section-7.body{
+    font-size: 20px !important;
+  }
+
+  button.golden.section-7{
+    padding: 9px 30px;
+    width: 156px;
+
   }
 
 }
