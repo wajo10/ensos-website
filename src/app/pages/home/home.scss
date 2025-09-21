@@ -395,6 +395,78 @@ button.section-6{
   display: none;
 }
 
+/* ====== Section 7 ====== */
+.section.section-7{
+  background: url('/img/section7/background.jpg') no-repeat center center;
+  min-height: 200vh;
+}
+
+.overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.89);
+}
+
+.section-7.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+h2.section-7{
+  color: var(--gold-400);
+  margin-top: 165px;
+}
+
+h3.subtitle.section-7{
+  text-align: center;
+  margin-top: 24px
+}
+
+img.section-7.divider{
+  margin-top: 118px;
+}
+
+.paragraph.section-7{
+  margin-top: 172px;
+  max-width: 548px;
+  text-align: center;
+}
+
+p.sub.black.body.section-7{
+  max-width: 548px;
+}
+
+button.transparent.section-7{
+  margin-top:44px ;
+}
+
+.crane{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  background: transparent url('/img/section7/crane-01.png') no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.right-text.section-7{
+  max-width: 400px;
+  text-align: left !important;
+  position: absolute;
+  bottom: 298px;
+  right: 13.5vw;
+  z-index: 10;
+}
+
+button.section-7.golden{
+  margin-top: 45px
+}
+
 
 
 
