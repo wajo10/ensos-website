@@ -519,13 +519,18 @@ h3.section-8.title{
 }
 
 p.section-8.body{
-  min-width: 439px;
+  width: 439px;
   font-size: 20px;
+  max-width: max-content;
 }
 
 button.section-8.golden{
   margin-top: 32px;
   min-width: 182px;
+}
+
+.section-8.--mobile{
+  display: none;
 }
 
 
@@ -918,7 +923,56 @@ button.section-8.golden{
   button.golden.section-7{
     padding: 9px 30px;
     width: 156px;
+  }
 
+  /* Section 8 responsive */
+  .section.section-8{
+    min-height: auto;
+    height: auto;
+  }
+
+  .section-8.container{
+    width: 100%;
+  }
+
+  .section-8.sub-section{
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .section-8.desktop{
+    display: none;
+  }
+
+  .top-subsection{
+    margin-top: 49px
+  }
+
+  .bottom-subsection{
+    margin-bottom: 44px;
+  }
+
+  h3.section-8.title{
+    font-size: 28px;
+    line-height: normal;
+    margin-top: 80px;
+    max-width: 306px;
+  }
+
+  .section-8.--mobile{
+    display: block;
+  }
+
+  .image.section-8.--mobile{
+    margin: 57px 0 45px 0;
+    object-fit: cover;
+  }
+
+  p.section-8.body{
+    line-height: normal;
+    font-size: 15px;
+    max-width: 270px;
+    text-align: center;
   }
 
 }
