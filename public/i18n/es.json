@@ -32,7 +32,7 @@
       "body-1": "Con más de una década de experiencia en la cocina nikkei, Sergio Nakamura es copropietario del famoso restaurante Gaijin en Lima. Formado en Le Cordon Bleu, perfeccionó su arte en dos de los restaurantes más aclamados del mundo: Central y Maido, ambos clasificados entre los 50 mejores restaurantes del mundo, según la guía San Pellegrino.",
       "title-2": "\"Con nuestro menú, queremos transmitir equilibrio, identidad y emoción.\"",
       "body-2": "Chef por vocación y pasión, Carlos Gamboa ha forjado su trayectoria culinaria formándose en Costa Rica, Perú, Colombia y México. Su experiencia en hoteles y restaurantes de primer nivel, entre los que se incluyen Marriott, JW Marriott, Cala Luna, Sheraton y El Silencio, ha sido fundamental para desarrollar una cocina que se define por su carácter y alma.",
-      "button": "Reserve ahora"
+      "button": "Reserva ahora"
     },
     "section-7": {
       "title": "De la simplicidad, algo único",
@@ -42,6 +42,11 @@
       "body-3": "La grulla surgió como nuestra primera raíz, un símbolo eterno de longevidad, buena fortuna y el legado que nos comprometemos a transmitir con cada creación.",
       "button-1": "Planea tu visita",
       "button-2": "Reserva la experiencia"
+    },
+    "section-8": {
+      "title": "A partir de ahí, abrazamos el círculo: abierto, infinito, imperfecto pero completo.",
+      "body": "Dentro de este círculo se elevan los cinco anillos que encarnan la herencia, la maestría y la transformación, cada uno de ellos inspirado en los elementos Tierra, Fuego, Agua, Viento y Éter (guiados por El libro de los cinco anillos del samurái Miyamoto Musashi).",
+      "button": "Planea tu visita"
     }
   }
 }

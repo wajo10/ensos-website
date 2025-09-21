@@ -471,6 +471,62 @@ button.section-7.golden{
   display: none;
 }
 
+/* ====== Section 8 ====== */
+.section.section-8{
+  background: var(--black-600);
+  min-height: 100vh;
+  height: auto;
+}
+
+.section-8.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-8.sub-section{
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-8.sub-section.desktop{
+  background: url('/img/section8/img-5.jpg')  no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+h3.section-8.title{
+  font-size: 45px;
+  line-height: 120%;
+  margin-top: 61px;
+  width: 497px;
+  text-align: center;
+}
+
+.top-subsection, .bottom-subsection{
+  text-align: center;
+}
+
+.top-subsection{
+  margin-top: 163px
+}
+
+.bottom-subsection{
+  margin-bottom: 83px;
+}
+
+p.section-8.body{
+  min-width: 439px;
+  font-size: 20px;
+}
+
+button.section-8.golden{
+  margin-top: 32px;
+  min-width: 182px;
+}
 
 
 
