@@ -52,5 +52,19 @@
       "title" : "An authentic Nikkei gastronomic experience",
       "button" : "Reserve now"
     }
+  },
+  "footer": {
+    "contact": "Contact",
+    "about": "About",
+    "menu": "Menu",
+    "address": "Address",
+    "open-hours": "Opening Hours",
+    "open-hours-details": "From 12:00 until 21:00 Monday to Sunday",
+    "book-a-table": "Book a Table",
+    "book-details": "Step into a unique nikkei experience in Costa Rica.",
+    "reserve-button": "Reserve now",
+    "back-to-top": "Back to top",
+    "privacy-policy": "Privacy Policy",
+    "terms-and-conditions": "Terms & Conditions"
   }
 }

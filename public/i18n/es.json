@@ -52,5 +52,19 @@
       "title" : "Una auténtica experiencia gastronómica Nikkei",
       "button" : "Reserva ahora"
     }
+  },
+  "footer": {
+    "contact": "Contacto",
+    "about": "Nosotros",
+    "menu": "Menú",
+    "address": "Dirección",
+    "open-hours": "Horario",
+    "open-hours-details": "De 12:00 hasta 21:00 Lunes a Domingo",
+    "book-a-table": "Reservar una mesa",
+    "book-details": "Sumérgete en una experiencia nikkei única en Costa Rica.",
+    "reserve-button": "Reservar ahora",
+    "back-to-top": "Volver arriba",
+    "privacy-policy": "Política de privacidad",
+    "terms-and-conditions": "Términos & Condiciones"
   }
 }
