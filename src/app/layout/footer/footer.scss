@@ -1,0 +1,32 @@
+.footer{
+  background: var(--black-600);
+}
+
+.footer-logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 52px;
+  margin-top: 62px;
+}
+
+.redirect{
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--white-500);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.redirect:hover{
+  color: var(--gold-500);
+}

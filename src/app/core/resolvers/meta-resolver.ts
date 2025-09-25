@@ -15,7 +15,7 @@ export class metaResolver implements Resolve<boolean> {
   async resolve(route: ActivatedRouteSnapshot): Promise<boolean> {
     const lang = route.paramMap.get('lang') || 'en';
 
-    const baseUrl = 'https://ensorestaurant.com';
+    const baseUrl = 'https://ensorestaurante.com';
 
     //Tags for SEO
     const path = route.url.join('/');
