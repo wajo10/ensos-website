@@ -18,7 +18,7 @@ export const routes: Routes = [
       {
         path: 'home',
         component: Home,
-        title: 'Enso',
+        title: 'Ensō',
         // data: {
         //   metaTitleKey: 'SEO.home.title',
         //   metaDescriptionKey: 'SEO.home.description',

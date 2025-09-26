@@ -18,4 +18,5 @@ import {ImageCarousel} from '../../core/components/image-carousel/image-carousel
 })
 export class Home {
 
+
 }

@@ -16,6 +16,8 @@ export class Navbar implements OnDestroy{
   @HostBinding('class.dark') isDark = false;
   @HostBinding('class.light') isLight = true;
   @HostBinding('class.scrolled') scrolled = false;
+  @HostBinding('class.menu-open') menuOpen = false;
+
 
   private sub: Subscription;
   constructor(theme: NavThemeService) {
@@ -32,6 +34,28 @@ export class Navbar implements OnDestroy{
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    this.lockScroll(this.menuOpen);
+  }
+
+  closeMenu() {
+    if (!this.menuOpen) return;
+    this.menuOpen = false;
+    this.lockScroll(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEsc() {
+    this.closeMenu();
+  }
+
+  private lockScroll(lock: boolean) {
+    if (typeof document === 'undefined') return;
+    document.body.style.overflow = lock ? 'hidden' : '';
+    document.body.style.touchAction = lock ? 'none' : '';
   }
 
 }

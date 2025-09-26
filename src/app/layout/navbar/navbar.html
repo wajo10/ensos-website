@@ -1,25 +1,48 @@
 <nav class="nav" role="navigation" aria-label="Main">
   <div class="nav-inner">
-    <!-- Izquierda -->
+    <!-- Left -->
     <div class="nav-left">
-      <a class="nav-link" routerLink="/about">{{ "navbar.about-us" | translate }}</a>
-      <a class="nav-link" routerLink="/contact">{{ "navbar.contact" | translate }}</a>
+      <a class="nav-link desktop" routerLink="/about">{{ "navbar.about-us" | translate }}</a>
+      <a class="nav-link desktop" routerLink="/contact">{{ "navbar.contact" | translate }}</a>
     </div>
 
-    <!-- Centro -->
+    <!-- Center -->
     <div class="nav-center">
       <a class="nav-logo" routerLink="/">
         <img src="img/logo.png" alt="Logo" width="118" height="66" />
       </a>
     </div>
 
-    <!-- Derecha (orden desde la derecha hacia la izquierda) -->
+    <!-- Right (Right to Left) -->
     <div class="nav-right">
-      <a class="nav-link" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
-      <a class="nav-link golden" routerLink="/reservations">{{ "navbar.reservations" | translate }}</a>
-      <button class="hamburger" type="button" aria-label="Open menu">
+      <a class="nav-link desktop" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
+      <a class="nav-link desktop golden" routerLink="/reservations">{{ "navbar.reservations" | translate }}</a>
+      <button
+        class="hamburger"
+        type="button"
+        [attr.aria-expanded]="menuOpen"
+        [attr.aria-label]="menuOpen ? 'Close menu' : 'Open menu'"
+        aria-controls="mobileMenu"
+        (click)="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
+  <!-- Mobile Menu Overlay -->
+  <div
+    class="mobile-overlay"
+    id="mobileMenu"
+    [attr.aria-hidden]="!menuOpen"
+    (click)="closeMenu()">
+    <div class="mobile-overlay__content" (click)="$event.stopPropagation()">
+      <div class="overlay-container">
+        <a class="nav-link mobile" routerLink="/about">{{ "navbar.about-us" | translate }}</a>
+        <a class="nav-link mobile" routerLink="/contact">{{ "navbar.contact" | translate }}</a>
+        <a class="nav-link mobile" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
+        <a class="nav-link mobile golden" routerLink="/reservations">{{ "navbar.reservations" | translate }}</a>
+      </div>
+
+    </div>
+  </div>
+
 </nav>
