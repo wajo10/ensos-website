@@ -2,8 +2,8 @@
   <div class="nav-inner">
     <!-- Left -->
     <div class="nav-left">
-      <a class="nav-link desktop" routerLink="/about">{{ "navbar.about-us" | translate }}</a>
-      <a class="nav-link desktop" routerLink="/contact">{{ "navbar.contact" | translate }}</a>
+      <a class="nav-link desktop" (click)="go('about')">{{ "navbar.about-us" | translate }}</a>
+      <a class="nav-link desktop" (click)="go('contact')">{{ "navbar.contact" | translate }}</a>
     </div>
 
     <!-- Center -->
@@ -16,7 +16,7 @@
     <!-- Right (Right to Left) -->
     <div class="nav-right">
       <a class="nav-link desktop" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
-      <a class="nav-link desktop golden" routerLink="/reservations">{{ "navbar.reservations" | translate }}</a>
+      <a class="nav-link desktop golden" (click)="openReserve()">{{ "navbar.reservations" | translate }}</a>
       <button
         class="hamburger"
         type="button"
@@ -36,10 +36,10 @@
     (click)="closeMenu()">
     <div class="mobile-overlay__content" (click)="$event.stopPropagation()">
       <div class="overlay-container">
-        <a class="nav-link mobile" routerLink="/about">{{ "navbar.about-us" | translate }}</a>
-        <a class="nav-link mobile" routerLink="/contact">{{ "navbar.contact" | translate }}</a>
+        <a class="nav-link mobile" (click)="go('about')">{{ "navbar.about-us" | translate }}</a>
+        <a class="nav-link mobile" (click)="go('contact')">{{ "navbar.contact" | translate }}</a>
         <a class="nav-link mobile" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
-        <a class="nav-link mobile golden" routerLink="/reservations">{{ "navbar.reservations" | translate }}</a>
+        <a class="nav-link mobile golden" (click)="openReserve()">{{ "navbar.reservations" | translate }}</a>
       </div>
 
     </div>

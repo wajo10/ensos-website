@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 body{
   margin: 0;
 }
@@ -10,6 +9,7 @@ html{
   --gold-800: #6E5009;;
   --white-500: #F7F5F0;
   --black-600: #000000;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, p{

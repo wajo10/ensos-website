@@ -25,13 +25,13 @@
   background: var(--white-500);
   height: 987px;
 
-  /* Variables de layout de líneas */
+  /* Layout variables */
   --line-top: 97px;
   --line-bottom: 80px;
   --line-right: 72px;
   --line-center: 715px;
 
-  /* Centro geométrico (desktop) */
+  /* Geometric Center */
   --yTop: var(--line-top);
   --yBottom: calc(100% - var(--line-bottom));
   --cy: calc((var(--yTop) + var(--yBottom)) / 2);
@@ -41,7 +41,7 @@
   --cx: calc((var(--xLeft) + var(--xRight)) / 2);
 }
 
-/* Overlay líneas */
+
 .grid-lines{
   position: absolute;
   inset: 0;
@@ -49,13 +49,13 @@
   z-index: 0;
 }
 
-/* Trazo base */
+
 .line{
   position: absolute;
   background: var(--gold-500);
 }
 
-/* Líneas */
+
 .line-top{
   top: var(--line-top);
   left: 0;
@@ -84,7 +84,7 @@
   width: 2px;
 }
 
-/* Texto (desktop) */
+
 .grid-copy{
   position: absolute;
   left: 75px;
@@ -106,7 +106,7 @@
   margin-top: 36px;
 }
 
-/* Imagen (desktop absoluta centrada por líneas) */
+
 .grid-image{
   position: absolute;
   left: var(--cx);
@@ -581,7 +581,6 @@ button.section-9.transparent.white-border{
   }
 
   .grid-section{
-    /* Rectángulo completo ya definido por estas líneas */
     --line-top: 25px;
     --line-bottom: 25px;
     --line-right: 27px;
@@ -603,7 +602,6 @@ button.section-9.transparent.white-border{
     text-align: center;
   }
 
-  /* Línea central en móviles va por la izquierda con offset */
   .line-center{
     top: 0;
     bottom: 0;
@@ -628,7 +626,6 @@ button.section-9.transparent.white-border{
     margin: 0 0 24px 0;
   }
 
-  /* Imagen en flujo, centrada y con tamaño móvil solicitado */
   .grid-image{ display: none; }
   .grid-image--mobile{
     display: block;
