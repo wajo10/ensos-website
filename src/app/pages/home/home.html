@@ -38,7 +38,7 @@
     <p class="grid-sub" [innerHTML]="'home.grid-section.body' | translate">
     </p>
 
-    <button class="golden book-button">
+    <button class="golden book-button" (click)="openReserve()">
       {{ "home.grid-section.button" | translate}}
     </button>
   </div>
@@ -106,7 +106,7 @@
     <p class="sub black section-4" [innerHTML]="('home.section-4.body-1' | translate)"></p>
     <p class="sub black section-4" [innerHTML]="('home.section-4.body-2' | translate)"></p>
   </div>
-  <button class="golden section-4">
+  <button class="golden section-4" (click)="go('story', false)">
     {{ "home.section-4.button" | translate }}
   </button>
 </div>
@@ -131,7 +131,7 @@
       >
     </div>
     <p class="grid-sub section-5" [innerHTML]="('home.section-5.body' | translate)"></p>
-    <button class="transparent section-5">{{'home.section-5.button' | translate}}</button>
+    <button class="transparent section-5" (click)="openReserve()">{{'home.section-5.button' | translate}}</button>
   </div>
 </div>
 
@@ -170,7 +170,7 @@
       <p class="sub black section-6 chef-name">Carlos Gamboa</p>
       <p class="sub black section-6 chef-title">Head Chef</p>
       <p class="sub black section-6 paragraph body">{{"home.section-6.body-2" | translate}}</p>
-      <button class="transparent black section-6 desktop">Reserve now</button>
+      <button class="transparent black section-6 desktop" (click)="openReserve()">{{ 'home.section-6.button' | translate }}</button>
     </div>
     <div class="column">
       <img
@@ -187,7 +187,7 @@
   </div>
 </div>
 
-<div class="section section-7" navTheme="light">
+<div id="story" class="section section-7" navTheme="light">
   <div class="overlay container section-7">
     <h2 class="section-7 title">{{"home.section-7.title" | translate}}</h2>
     <h3 class="section-7 subtitle">{{"home.section-7.subtitle" | translate}}</h3>
@@ -205,7 +205,7 @@
       <p class="sub black section-7 body">{{"home.section-7.body-2" | translate}}</p>
     </div>
 
-    <button class="transparent black section-7">{{"home.section-7.button-1" | translate}}</button>
+    <button class="transparent black section-7" (click)="openReserve()">{{"home.section-7.button-1" | translate}}</button>
     <div class="crane-container">
       <div class="crane"></div>
       <div class="section-7 crane-2 --mobile"></div>
@@ -213,7 +213,7 @@
 
     <div class="section-7 right-text">
       <h3 class="section-7 body">{{"home.section-7.body-3" | translate}}</h3>
-      <button class="golden section-7">{{"home.section-7.button-2" | translate}}</button>
+      <button class="golden section-7" (click)="openReserve()">{{"home.section-7.button-2" | translate}}</button>
     </div>
 
   </div>
@@ -235,7 +235,7 @@
       >
       <div class="bottom-subsection">
         <p class="sub black section-8 body">{{"home.section-8.body" | translate}}</p>
-        <button class="golden section-8">{{"home.section-8.button" | translate}}</button>
+        <button class="golden section-8" (click)="openReserve()">{{"home.section-8.button" | translate}}</button>
       </div>
 
     </div>
@@ -245,6 +245,6 @@
 
 <div class="section section-9" navTheme="dark">
   <h3 class="section-9 title">{{"home.section-9.title" | translate}}</h3>
-  <button class="section-9 transparent white-border">{{"home.section-9.button" | translate}}</button>
+  <button class="section-9 transparent white-border" (click)="openReserve()">{{"home.section-9.button" | translate}}</button>
 </div>
 

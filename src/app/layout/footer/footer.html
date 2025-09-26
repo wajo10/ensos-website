@@ -8,8 +8,8 @@
     >
   </div>
   <div class="text-buttons">
-    <p class="redirect">{{ "footer.about" | translate }}</p>
-    <p class="redirect">{{ "footer.contact" | translate }}</p>
+    <p class="redirect" (click)="go('about')">{{ "footer.about" | translate }}</p>
+    <p class="redirect" (click)="go('contact')">{{ "footer.contact" | translate }}</p>
     <p class="redirect">{{ "footer.menu" | translate }}</p>
   </div>
 
@@ -51,13 +51,13 @@
     </div>
     <div class="footer-column third-column">
       <h3 class="footer-column-title">{{ "footer.contact" | translate }}</h3>
-      <p class="footer-column-item">+ (506) 6318 - 2593</p>
-      <p class="footer-column-item">{{'ensorestaurante@gmail.com'}}</p>
+      <a class="footer-column-item" href="tel:+50663182593">+ (506) 6318 - 2593</a>
+      <a class="footer-column-item" href="mailto:ensorestaurante@gmail.com">{{'ensorestaurante@gmail.com'}}</a>
     </div>
     <div class="footer-column fourth-column">
       <h3 class="footer-column-title">{{ "footer.book-a-table" | translate }}</h3>
       <p class="footer-column-item">{{ "footer.book-details" | translate }}</p>
-      <button class="golden">{{ "footer.reserve-button" | translate }}</button>
+      <button class="golden" (click)="openReserve()"> {{ "footer.reserve-button" | translate }}</button>
     </div>
 
     <div class="back-to-top" (click)="scrollToTop()">
