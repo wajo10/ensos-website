@@ -20,7 +20,7 @@ export class ScrollTo {
       window.scrollTo({ top: y, behavior: 'smooth' });
     };
 
-    if (baseUrl === '/' || baseUrl === '') {
+    if (baseUrl.includes("home")) {
       scrollToId(fragment);
     } else {
       const navEnded = this.router.events.pipe(filter(e => e instanceof NavigationEnd));

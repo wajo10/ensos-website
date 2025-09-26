@@ -567,9 +567,10 @@ button.section-9.transparent.white-border{
     display: block;
   }
   .background{
-    background: url('/img/home/background-mobile.jpg') no-repeat center center fixed;
+    background: url('/img/home/background-mobile.jpg') no-repeat center center;
     background-size: cover;
   }
+
 
   .right-logo{
     width: 100%;
@@ -1001,6 +1002,7 @@ button.section-9.transparent.white-border{
   /* Section 9 responsive */
   .section.section-9{
     height: 434px;
+    background: url('/img/section9/background.jpg') no-repeat center center;
   }
   h3.section-9.title{
     font-size: 28px;
