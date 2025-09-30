@@ -102,8 +102,9 @@
   margin: 0;
 }
 
-.book-button{
+.golden.book-button{
   margin-top: 36px;
+  padding: 14px;
 }
 
 
@@ -374,7 +375,7 @@ p.chef-name{
 }
 
 p.chef-title{
-  margin-bottom: 78px
+  margin-bottom: 78px;
 }
 
 p.paragraph.section-6{
@@ -398,7 +399,7 @@ button.section-6{
 /* ====== Section 7 ====== */
 .section.section-7{
   background: url('/img/section7/background.jpg') no-repeat center center;
-  min-height: 200vh;
+  min-height: 1936px;
 }
 
 .overlay{
@@ -449,9 +450,9 @@ button.transparent.section-7{
 
 .crane{
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: 0;
-  height: 100vh;
+  height: 1016px;
   width: 50vw;
   background: transparent url('/img/section7/crane-01.png') no-repeat;
   background-size: contain;
@@ -478,7 +479,7 @@ button.section-7.golden{
 /* ====== Section 8 ====== */
 .section.section-8{
   background: var(--black-600);
-  min-height: 100vh;
+  min-height: 992px;
   height: auto;
 }
 
@@ -486,6 +487,7 @@ button.section-7.golden{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .section-8.sub-section{
@@ -580,7 +582,7 @@ button.section-9.transparent.white-border{
     z-index: 1;
 
     img{
-      width: 80%;
+      width: 100%;
       height: auto;
     }
   }
@@ -675,7 +677,7 @@ button.section-9.transparent.white-border{
   }
 
   .book-button{
-    padding: 9px 30px;
+    padding: 9px 30px !important;
     max-width: 156px;
   }
 
@@ -832,6 +834,11 @@ button.section-9.transparent.white-border{
 
   p.section-6.chef-title{
     margin-bottom: 28px;
+    color: var(--gold-500) !important;
+  }
+
+  p.section-6.chef-name{
+    color: var(--gold-500) !important;
   }
 
   p.section-6.paragraph.body{

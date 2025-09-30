@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {filter} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 
-const NAV_OFFSET = 132;
+const NAV_OFFSET = 86;
 
 @Injectable({
   providedIn: 'root'

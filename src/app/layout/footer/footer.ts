@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {TranslatePipe} from '@ngx-translate/core';
 import {ScrollTo} from '../../core/services/scroll-to';
+import {RouterLink} from '@angular/router';
 
 const OPEN_TABLE_URL = "https://www.opentable.com/restaurant/profile/1457644/reserve?restref=1457644&lang=en-US&ot_source=Restaurant%20website"
 
@@ -9,7 +10,8 @@ const OPEN_TABLE_URL = "https://www.opentable.com/restaurant/profile/1457644/res
   selector: 'app-footer',
   imports: [
     NgOptimizedImage,
-    TranslatePipe
+    TranslatePipe,
+    RouterLink
   ],
   templateUrl: './footer.html',
   styleUrl: './footer.scss'

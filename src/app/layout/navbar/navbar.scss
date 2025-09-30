@@ -8,14 +8,14 @@
 }
 
 .nav {
-  padding: 33px 75px;
+  padding: 10px 75px;
   background: transparent;
   transition: background-color .2s, color .2s; ;
 }
 
 :host.dark .nav {
   color: #fff;
-  background: rgba(0,0,0,0.35);
+  background: var(--black-600);
 }
 
 
@@ -71,7 +71,7 @@
 }
 .nav-link:hover,
 .nav-link:focus {
-  opacity: 1;
+  color: var(--gold-500);
 }
 
 .golden{
