@@ -1,7 +1,7 @@
 
 <div class="section background" navTheme="light">
   <div class="right-logo">
-    <img ngSrc="img/home/logo-horizontal-rings.png" height="520" width="520" alt="Logo" priority>
+    <img ngSrc="img/home/logo-horizontal-rings.png" height="520" width="520" alt="Enso Logo" priority>
   </div>
 </div>
 
@@ -18,7 +18,7 @@
     ngSrc="/img/section2/img-2.jpg"
     width="498"
     height="604"
-    alt="Platillo Nikkei"
+    [alt]="'image-alt.home.scallops'| translate"
   >
 
 
@@ -32,7 +32,7 @@
       ngSrc="/img/section2/img-2-mobile.png"
       width="286"
       height="304"
-      alt="Platillo Nikkei"
+      [alt]="'image-alt.home.scallops'| translate"
     >
 
     <p class="grid-sub" [innerHTML]="'home.grid-section.body' | translate">
@@ -52,10 +52,10 @@
       <div class="black-img-container--mobile">
         <app-image-carousel
           [images]="[
-    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-3.png', alt: ('image-alt.home.batayaki'| translate) },
     { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-5.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-6.jpg', alt: 'Nigiri de salmón' }
+    { src: '/img/section3/img-5.jpg', alt: ('image-alt.home.usuzukuri'| translate) },
+    { src: '/img/section3/img-6.jpg', alt: ('image-alt.home.shiromi'| translate) }
   ]"
           [autoplay]="true"
           [interval]="3000"
@@ -74,10 +74,10 @@
     <div class="black-img-container">
       <app-image-carousel
         [images]="[
-    { src: '/img/section3/img-3.png', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-3.png', alt: ('image-alt.home.batayaki'| translate) },
     { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-5.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-6.jpg', alt: 'Nigiri de salmón' }
+    { src: '/img/section3/img-5.jpg', alt: ('image-alt.home.usuzukuri'| translate) },
+    { src: '/img/section3/img-6.jpg', alt: ('image-alt.home.shiromi'| translate) }
   ]"
         [autoplay]="true"
         [interval]="4000"
@@ -96,7 +96,8 @@
     <img
       class="header-image"
       ngSrc="/img/section4/img-7.jpg"
-      alt="Estructura japonesa"
+      [alt]="'image-alt.home.structure'| translate"
+      aria-hidden="true"
       width="1206"
       height="431"
     priority>
@@ -149,7 +150,7 @@
         ngSrc="/img/section6/img-12.jpg"
         width="357"
         height="405"
-        alt="Chef Sergio Nakamura"
+        [alt]="'image-alt.home.sergio'| translate"
       >
     </div>
     <h2 class="black title section-6 italic --mobile" style="max-width: 278px">{{"home.section-6.title-1" | translate}}</h2>
@@ -161,6 +162,7 @@
       width="20"
       height="19"
       alt="rings logo"
+      aria-hidden="true"
     >
 
   </div>
@@ -178,7 +180,7 @@
         ngSrc="/img/section6/img-13.png"
         width="357"
         height="405"
-        alt="Chef Carlos Gamboa"
+        [alt]="'image-alt.home.carlos'| translate"
       >
 
       <h2 class="black title section-6 italic --mobile" style="max-width: 242px" [innerHTML]="('home.section-6.title-2' | translate)"></h2>
@@ -197,6 +199,7 @@
       width="78"
       height="77"
       alt="rings logo"
+      aria-hidden="true"
     >
 
     <div class="section-7 paragraph">
@@ -223,7 +226,7 @@
   <div class="section-8 container">
     <div class="section-8 sub-section">
       <div class="top-subsection">
-        <img class="image section-8 logo" ngSrc="/img/rings.png" width="113" height="113" alt="Logo">
+        <img class="image section-8 logo" ngSrc="/img/rings.png" width="113" height="113" alt="Logo" aria-hidden="true">
         <h3 class="section-8 title">{{"home.section-8.title" | translate}}</h3>
       </div>
       <img
@@ -231,7 +234,7 @@
         ngSrc="/img/section8/img-5.jpg"
         width="286"
         height="304"
-        alt="Platillo Nikkei"
+        [alt]="'image-alt.home.experience'| translate"
       >
       <div class="bottom-subsection">
         <p class="sub black section-8 body">{{"home.section-8.body" | translate}}</p>

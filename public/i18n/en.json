@@ -66,5 +66,88 @@
     "back-to-top": "Back to top",
     "privacy-policy": "Privacy Policy",
     "terms-and-conditions": "Terms & Conditions"
+  },
+  "SEO": {
+    "home": {
+      "title": "Ensō - Nikkei Restaurant in Costa Rica | Japanese-Peruvian Fusion Cuisine",
+      "description": "Discover Ensō, a luxury Nikkei restaurant in Escazú, Costa Rica, where chefs craft a unique tasting menu inspired by nature and culinary mastery.",
+      "keywords": [
+        "nikkei bar",
+        "nikkei menu",
+        "nikkei meaning",
+        "nikkei hours",
+        "nikkei restaurant",
+        "nikkei sushi",
+        "nikkei restaurant near me",
+        "nikkei restaurant costa rica",
+        "tokyo nikkei near me",
+        "nikkei food san jose costa rica",
+        "nikkei restaurant san jose costa rica",
+        "nikkei restaurant escazu",
+        "sushi costa rica",
+        "sushi escazu",
+        "sushi san jose costa rica",
+        "japanese food costa rica",
+        "japanese food escazu",
+        "japanese food san jose costa rica",
+        "japanese restaurant costa rica",
+        "japanese restaurant escazu",
+        "peruvian restaurant costa rica",
+        "peruvian restaurant escazu",
+        "peruvian restaurant san jose costa rica",
+        "peruvian food costa rica",
+
+        "nikkei cuisine",
+        "japanese peruvian fusion",
+        "japanese peruvian restaurant",
+        "fusion sushi",
+        "best sushi escazu",
+        "best nikkei restaurant costa rica",
+        "best restaurants escazu",
+        "fine dining escazu",
+        "tasting menu escazu",
+        "chef's tasting menu costa rica",
+        "omakase escazu",
+        "omakase costa rica",
+        "romantic restaurant escazu",
+        "date night escazu",
+        "cocktail bar escazu",
+        "pisco cocktails escazu",
+        "sake bar costa rica",
+        "ceviche nikkei",
+        "tiradito nikkei",
+        "book a table escazu",
+        "restaurant reservations escazu",
+        "hours escazu restaurant",
+        "private dining escazu",
+        "group dining escazu",
+
+        "enso restaurant",
+        "ensō restaurant",
+        "enso nikkei",
+        "ensō nikkei",
+        "enso escazu",
+        "ensō escazú",
+
+        "restaurants in escazu costa rica",
+        "san jose costa rica restaurants",
+        "sushi san jose cr",
+        "nikkei cr"
+      ]
+    }
+  },
+  "image-alt": {
+    "home": {
+      "scallops": "Scallops with XO sauce and tare, part of the exclusive Nikkei menu at a gourmet restaurant in Escazú, Costa Rica.",
+      "batayaki": "Batayaki octopus with eel sauce and togarashi, a unique fusion dish at a luxury restaurant in Costa Rica's GAM.",
+      "usuzukuri": "Usuzukuri Midori Nikkei: catch of the day with jalapeño tiger milk and crispy yam in Escazú, Costa Rica.",
+      "shiromi":"Shiromi Pachikay: Catch of the day with yukke sauce, pachikay, and negui, part of the exclusive Nikkei menu at the Nikkei restaurant on Avenida Escazú.",
+      "structure": "Detail of a traditional Chinese archway with green tiled roof.",
+      "sergio": "Chef Sergio Nakamura preparing a dish in the kitchen.",
+      "carlos": "Chef Carlos Gamboa fishing for seafood.",
+      "experience": "Disfrute de la mejor gastronomía nikkei en Avenida Escazú, Costa Rica, un sofisticado destino para degustar la excelencia culinaria japonesa-peruana."
+
+
+    }
   }
 }

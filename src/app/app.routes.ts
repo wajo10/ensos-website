@@ -19,12 +19,12 @@ export const routes: Routes = [
         path: 'home',
         component: Home,
         title: 'Ensō',
-        // data: {
-        //   metaTitleKey: 'SEO.home.title',
-        //   metaDescriptionKey: 'SEO.home.description',
-        //   metaKeywordsKey: 'SEO.home.keywords',
-        //   metaImage: '/img/thumbnail.png'
-        // },
+        data: {
+          metaTitleKey: 'SEO.home.title',
+          metaDescriptionKey: 'SEO.home.description',
+          metaKeywordsKey: 'SEO.home.keywords',
+          metaImage: 'img/meta-image.png'
+        },
         resolve: { meta: metaResolver }
       }
     ]
