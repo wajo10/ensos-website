@@ -45,7 +45,7 @@
     },
     "section-8": {
       "title": "From there, we embraced the circle: open, infinite, imperfect yet whole.",
-      "body": "Within this circle rise the five rings that embodies heritage, mastery, and transformation, each of them inspired by the elements of Earth, Fire, Water, Wind, and Ether (guided by The Book of Five Rings by samurai Miyamoto Musashi).",
+      "body": "Within this circle rise the five rings that embodies heritage, mastery, and transformation, each of them inspired by the elements of Earth, Fire, Water, Wind, and Ether (guided by <i>The Book of Five Rings</i> by samurai Miyamoto Musashi).",
       "button": "Plan Your Visit"
     },
     "section-9" : {
@@ -59,7 +59,7 @@
     "menu": "Menu",
     "address": "Address",
     "open-hours": "Opening Hours",
-    "open-hours-details": "From 12:00 until 21:00 Monday to Sunday",
+    "open-hours-details": "From 12:00 until 22:00 Monday to Sunday",
     "book-a-table": "Book a Table",
     "book-details": "Step into a unique nikkei experience in Costa Rica.",
     "reserve-button": "Reserve now",
@@ -146,8 +146,6 @@
       "sergio": "Chef Sergio Nakamura preparing a dish in the kitchen.",
       "carlos": "Chef Carlos Gamboa fishing for seafood.",
       "experience": "Disfrute de la mejor gastronomía nikkei en Avenida Escazú, Costa Rica, un sofisticado destino para degustar la excelencia culinaria japonesa-peruana."
-
-
     }
   }
 }

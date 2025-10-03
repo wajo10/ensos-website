@@ -6,7 +6,7 @@
 }
 
 .background{
-  background: url('/img/home/background.png') no-repeat center center fixed;
+  background: url('/img/home/background.webp') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -398,7 +398,7 @@ button.section-6{
 
 /* ====== Section 7 ====== */
 .section.section-7{
-  background: url('/img/section7/background.jpg') no-repeat center center;
+  background: url('/img/section7/background.webp') no-repeat center center;
   min-height: 1936px;
 }
 
@@ -454,7 +454,7 @@ button.transparent.section-7{
   left: 0;
   height: 1016px;
   width: 50vw;
-  background: transparent url('/img/section7/crane-01.png') no-repeat;
+  background: transparent url('/img/section7/crane-01.webp') no-repeat;
   background-size: contain;
   z-index: 1;
 }
@@ -500,7 +500,7 @@ button.section-7.golden{
 }
 
 .section-8.sub-section.desktop{
-  background: url('/img/section8/img-5.jpg')  no-repeat;
+  background: url('/img/section8/img-5.webp')  no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -543,7 +543,7 @@ button.section-8.golden{
 
 .section.section-9{
   height: 70vh;
-  background: url('/img/section9/background.jpg') no-repeat center center fixed;
+  background: url('/img/section9/background.webp') no-repeat center center fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -569,7 +569,7 @@ button.section-9.transparent.white-border{
     display: block;
   }
   .background{
-    background: url('/img/home/background-mobile.jpg') no-repeat center center;
+    background: url('/img/home/background-mobile.webp') no-repeat center center;
     background-size: cover;
   }
 
@@ -922,6 +922,7 @@ button.section-9.transparent.white-border{
 
   .crane{
     position: inherit;
+    bottom: 0;
     width: 447px;
     height: 428px;
     left:-54px
@@ -932,7 +933,7 @@ button.section-9.transparent.white-border{
     position: absolute;
     right: 0;
     top: 180px;
-    background: transparent url('/img/section7/crane-02.png') no-repeat right;
+    background: transparent url('/img/section7/crane-02.webp') no-repeat right;
     background-size: contain;
     width: 224px;
     height: 200px;
@@ -1009,7 +1010,7 @@ button.section-9.transparent.white-border{
   /* Section 9 responsive */
   .section.section-9{
     height: 434px;
-    background: url('/img/section9/background.jpg') no-repeat center center;
+    background: url('/img/section9/background.webp') no-repeat center center;
   }
   h3.section-9.title{
     font-size: 28px;

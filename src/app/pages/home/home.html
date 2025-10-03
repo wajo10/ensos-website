@@ -15,7 +15,7 @@
 
   <img
     class="grid-image"
-    ngSrc="/img/section2/img-2.jpg"
+    ngSrc="/img/section2/img-2.webp"
     width="498"
     height="604"
     [alt]="'image-alt.home.scallops'| translate"
@@ -29,7 +29,7 @@
 
     <img
       class="grid-image--mobile"
-      ngSrc="/img/section2/img-2-mobile.png"
+      ngSrc="/img/section2/img-2-mobile.webp"
       width="286"
       height="304"
       [alt]="'image-alt.home.scallops'| translate"
@@ -52,10 +52,10 @@
       <div class="black-img-container--mobile">
         <app-image-carousel
           [images]="[
-    { src: '/img/section3/img-3.png', alt: ('image-alt.home.batayaki'| translate) },
-    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-5.jpg', alt: ('image-alt.home.usuzukuri'| translate) },
-    { src: '/img/section3/img-6.jpg', alt: ('image-alt.home.shiromi'| translate) }
+    { src: '/img/section3/img-3.webp', alt: ('image-alt.home.batayaki'| translate) },
+    { src: '/img/section3/img-4.webp', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-5.webp', alt: ('image-alt.home.usuzukuri'| translate) },
+    { src: '/img/section3/img-6.webp', alt: ('image-alt.home.shiromi'| translate) }
   ]"
           [autoplay]="true"
           [interval]="3000"
@@ -74,10 +74,10 @@
     <div class="black-img-container">
       <app-image-carousel
         [images]="[
-    { src: '/img/section3/img-3.png', alt: ('image-alt.home.batayaki'| translate) },
-    { src: '/img/section3/img-4.jpg', alt: 'Nigiri de salmón' },
-    { src: '/img/section3/img-5.jpg', alt: ('image-alt.home.usuzukuri'| translate) },
-    { src: '/img/section3/img-6.jpg', alt: ('image-alt.home.shiromi'| translate) }
+    { src: '/img/section3/img-3.webp', alt: ('image-alt.home.batayaki'| translate) },
+    { src: '/img/section3/img-4.webp', alt: 'Nigiri de salmón' },
+    { src: '/img/section3/img-5.webp', alt: ('image-alt.home.usuzukuri'| translate) },
+    { src: '/img/section3/img-6.webp', alt: ('image-alt.home.shiromi'| translate) }
   ]"
         [autoplay]="true"
         [interval]="4000"
@@ -95,7 +95,7 @@
   <div class="header-image-container">
     <img
       class="header-image"
-      ngSrc="/img/section4/img-7.jpg"
+      ngSrc="/img/section4/img-7.webp"
       [alt]="'image-alt.home.structure'| translate"
       aria-hidden="true"
       width="1206"
@@ -125,7 +125,7 @@
     <div class="img-container-section-5">
       <img
         class="image section-5"
-        ngSrc="/img/section5/img-11.jpg"
+        ngSrc="/img/section5/img-11.webp"
         width="286"
         height="304"
         alt="Platillo Nikkei"
@@ -147,7 +147,7 @@
     <div class="column">
       <img
         class="image section-6 chef"
-        ngSrc="/img/section6/img-12.jpg"
+        ngSrc="/img/section6/img-12.webp"
         width="357"
         height="405"
         [alt]="'image-alt.home.sergio'| translate"
@@ -177,7 +177,7 @@
     <div class="column">
       <img
         class="image section-6 chef"
-        ngSrc="/img/section6/img-13.png"
+        ngSrc="/img/section6/img-13.webp"
         width="357"
         height="405"
         [alt]="'image-alt.home.carlos'| translate"
@@ -231,13 +231,13 @@
       </div>
       <img
         class="image section-8 --mobile"
-        ngSrc="/img/section8/img-5.jpg"
+        ngSrc="/img/section8/img-5.webp"
         width="286"
         height="304"
         [alt]="'image-alt.home.experience'| translate"
       >
       <div class="bottom-subsection">
-        <p class="sub black section-8 body">{{"home.section-8.body" | translate}}</p>
+        <p class="sub black section-8 body" [innerHTML]='("home.section-8.body" | translate)'></p>
         <button class="golden section-8" (click)="openReserve()">{{"home.section-8.button" | translate}}</button>
       </div>
 
