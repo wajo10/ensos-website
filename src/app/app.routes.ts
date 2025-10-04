@@ -23,7 +23,7 @@ export const routes: Routes = [
           metaTitleKey: 'SEO.home.title',
           metaDescriptionKey: 'SEO.home.description',
           metaKeywordsKey: 'SEO.home.keywords',
-          metaImage: 'img/meta-image.png'
+          metaImage: 'img/meta-image.webp'
         },
         resolve: { meta: metaResolver }
       }

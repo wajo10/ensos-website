@@ -58,6 +58,8 @@
     "about": "About",
     "menu": "Menu",
     "address": "Address",
+    "po-box": "P.O. Box",
+    "zip-code": "Zip Code",
     "open-hours": "Opening Hours",
     "open-hours-details": "From 12:00 until 22:00 Monday to Sunday",
     "book-a-table": "Book a Table",

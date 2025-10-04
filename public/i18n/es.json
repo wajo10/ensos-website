@@ -58,6 +58,8 @@
     "about": "Nosotros",
     "menu": "Menú",
     "address": "Dirección",
+    "po-box": "Apartado postal",
+    "zip-code": "Código postal",
     "open-hours": "Horario",
     "open-hours-details": "De 12:00 hasta 22:00 Lunes a Domingo",
     "book-a-table": "Reservar una mesa",
