@@ -43,4 +43,8 @@ export class Footer {
     window.open("https://www.instagram.com/enso.restaurante/", '_blank', 'noopener');
   }
 
+  openMaps() {
+    window.open("https://maps.app.goo.gl/PAzxzw3heyBZSfqz7", '_blank', 'noopener');
+  }
+
 }

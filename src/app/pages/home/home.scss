@@ -683,7 +683,7 @@ button.section-9.transparent.white-border{
 
   /* Black section responsive */
   .black-section{
-    min-height: 100vh;
+    height: max-content;
   }
   .black-section-content{
     flex-direction: column;
