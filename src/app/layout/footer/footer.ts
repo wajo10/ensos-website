@@ -47,4 +47,8 @@ export class Footer {
     window.open("https://maps.app.goo.gl/PAzxzw3heyBZSfqz7", '_blank', 'noopener');
   }
 
+  openWaze() {
+    window.open("https://www.waze.com/ul?ll=9.936353746140972%2C-84.14325014255192&navigate=yes&zoom=17", '_blank', 'noopener');
+  }
+
 }

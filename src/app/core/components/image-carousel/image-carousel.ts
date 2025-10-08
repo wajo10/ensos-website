@@ -1,7 +1,14 @@
 import {
-  AfterViewInit, Component, Inject, Input, PLATFORM_ID, OnDestroy, HostBinding, ChangeDetectorRef
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  HostBinding,
+  Inject,
+  Input,
+  OnDestroy,
+  PLATFORM_ID
 } from '@angular/core';
-import { CommonModule, NgOptimizedImage, isPlatformBrowser } from '@angular/common';
+import {CommonModule, isPlatformBrowser, NgOptimizedImage} from '@angular/common';
 
 export interface CarouselImage {
   src: string;
@@ -32,13 +39,96 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
   @HostBinding('attr.aria-label') label = 'image carousel';
 
   current = 0;
+  // === Swipe state ===
+  dragging = false;
   private timerId: any = null;
   private isBrowser = false;
   private reducedMotion = false;
+  private startX = 0;
+  private startY = 0;
+  private startTime = 0;
+  private width = 1;            // ancho del carrusel para convertir px->%
+  private axisLocked: 'x' | 'y' | null = null;
+  private dragOffsetPx = 0;
 
   constructor(@Inject(PLATFORM_ID) platformId: Object, private cdr: ChangeDetectorRef) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
+
+  get trackTransform(): string {
+    const dragPct = (this.dragOffsetPx / Math.max(1, this.width)) * 100;
+    const pct = (-100 * this.current) + dragPct;
+    return `translate3d(${pct}%, 0, 0)`;
+  }
+
+  // === Swipe handlers ===
+  onPointerDown(ev: PointerEvent): void {
+    if (!this.isBrowser) return;
+    // Solo iniciar si hay imágenes
+    if (!this.images?.length) return;
+
+    // Permite scroll vertical del navegador (ver CSS: touch-action: pan-y)
+    this.width = (ev.currentTarget as HTMLElement).clientWidth || window.innerWidth;
+    this.dragging = true;
+    this.axisLocked = null;
+    this.startX = ev.clientX;
+    this.startY = ev.clientY;
+    this.startTime = performance.now();
+    this.dragOffsetPx = 0;
+
+    // Captura el puntero para seguir recibiendo eventos aunque salga del elemento
+    (ev.target as HTMLElement).setPointerCapture?.(ev.pointerId);
+
+    // Pausa autoplay mientras se arrastra
+    this.stopAutoplay();
+  }
+
+  onPointerMove(ev: PointerEvent): void {
+    if (!this.dragging) return;
+
+    const dx = ev.clientX - this.startX;
+    const dy = ev.clientY - this.startY;
+
+    // Bloqueo de eje: decide si el gesto es horizontal o vertical
+    if (this.axisLocked === null) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return; // pequeño “dead zone”
+      this.axisLocked = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+    }
+    if (this.axisLocked === 'y') {
+      // gesto vertical: abandonar drag para no bloquear scroll de página
+      this.dragging = false;
+      this.dragOffsetPx = 0;
+      return;
+    }
+
+    // Actualiza desplazamiento horizontal en px
+    this.dragOffsetPx = dx;
+    this.cdr.markForCheck();
+  }
+
+  onPointerUp(ev: PointerEvent): void {
+    if (!this.dragging) return;
+
+    this.dragging = false;
+    (ev.target as HTMLElement).releasePointerCapture?.(ev.pointerId);
+
+    const dx = ev.clientX - this.startX;
+    const dt = Math.max(1, performance.now() - this.startTime); // ms
+    const velocity = Math.abs(dx) / dt; // px/ms
+
+    const threshold = this.width * 0.20; // 20% del ancho
+    const shouldSlide = Math.abs(dx) > threshold || velocity > 0.5;
+
+    if (shouldSlide) {
+      if (dx < 0) this.next(); else this.prev();
+    }
+
+    this.dragOffsetPx = 0;
+    this.axisLocked = null;
+    this.cdr.markForCheck();
+    this.restartAutoplayIfNeeded();
+  }
+
 
   ngAfterViewInit(): void {
     this.current = Math.min(Math.max(0, this.startIndex), this.images.length - 1);
