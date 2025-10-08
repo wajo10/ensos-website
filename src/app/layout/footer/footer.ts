@@ -51,4 +51,8 @@ export class Footer {
     window.open("https://www.waze.com/ul?ll=9.936353746140972%2C-84.14325014255192&navigate=yes&zoom=17", '_blank', 'noopener');
   }
 
+  openWhatsApp() {
+    window.open("https://wa.me/50663182593?text=Hola! Quiero obtener más información y realizar una reservación", '_blank', 'noopener');
+  }
+
 }
