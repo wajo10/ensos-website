@@ -33,6 +33,12 @@ const staticMiddleware = express.static(browserDistFolder, {
   redirect: false,
 });
 
+app.get('/sitemap.xml', (req, res) => {
+  const sitemapXml = generateSitemap();
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemapXml);
+});
+
 // Serve only asset-like requests (URLs that contain a file extension), avoid Express path patterns to prevent path-to-regexp errors.
 app.use((req, res, next) => {
   if (/\.[a-zA-Z0-9]+$/.test(req.path)) {
@@ -113,6 +119,50 @@ if (isMainModule(import.meta.url)) {
 
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
+}
+
+function generateSitemap() {
+  const baseUrl = 'https://ensorestaurante.com';
+
+  // Languages present under the `:lang` segment
+  const langs = ['es', 'en'];
+
+  // Slugs under `:lang` ('' -> '/:lang' home)
+  const slugs = [
+    '', 'home'
+  ];
+
+  // Priorities per slug (fallback = 0.5)
+  const priorities: Record<string, number> = {
+    '': 1.0,
+    'home': 1.0,
+  };
+
+  // Build localized routes
+  const routes = langs.flatMap((lang) =>
+    slugs.map((slug) => ({
+      route: `/${lang}${slug ? `/${slug}` : ''}`,
+      priority: priorities[slug] ?? 0.5
+    }))
+  );
+
+  const urlsXml = routes
+    .map(
+      (r) => `<url>
+  <loc>${baseUrl}${r.route}</loc>
+  <changefreq>weekly</changefreq>
+  <priority>${r.priority}</priority>
+</url>`
+    )
+    .join('');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+${urlsXml}
+</urlset>`;
 }
 
 /**
