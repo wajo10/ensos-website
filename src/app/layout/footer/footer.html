@@ -67,7 +67,11 @@
     <div class="footer-column book-column">
       <h3 class="footer-column-title">{{ "footer.book-a-table" | translate }}</h3>
       <p class="footer-column-item">{{ "footer.book-details" | translate }}</p>
-      <button class="golden" (click)="openReserve()"> {{ "footer.reserve-button" | translate }}</button>
+      <button class="golden" gaClick="book_experience"
+              [gaParams]="{ location: 'footer', lang: currentLang }"
+              (click)="openReserve()">
+        {{ "footer.reserve-button" | translate }}
+      </button>
     </div>
     <div class="footer-column address-column mobile-only">
       <h3 class="footer-column-title">{{ "footer.address" | translate }}</h3>

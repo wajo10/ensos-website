@@ -9,6 +9,7 @@ import {
   PLATFORM_ID
 } from '@angular/core';
 import {CommonModule, isPlatformBrowser, NgOptimizedImage} from '@angular/common';
+import {AppAnalytics} from '../../services/analytics';
 
 export interface CarouselImage {
   src: string;
@@ -51,7 +52,7 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
   private axisLocked: 'x' | 'y' | null = null;
   private dragOffsetPx = 0;
 
-  constructor(@Inject(PLATFORM_ID) platformId: Object, private cdr: ChangeDetectorRef) {
+  constructor(@Inject(PLATFORM_ID) platformId: Object, private cdr: ChangeDetectorRef, private ga: AppAnalytics) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
@@ -121,6 +122,11 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
 
     if (shouldSlide) {
       if (dx < 0) this.next(); else this.prev();
+      this.ga.event('carousel_slide_manual', {
+        index: this.current,
+        src: this.images[this.current]?.src,
+        component: 'home'
+      })
     }
 
     this.dragOffsetPx = 0;
@@ -156,6 +162,11 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
       this.current = 0;
     }
     this.cdr.detectChanges();
+    this.ga.event('carousel_slide', {
+      index: this.current,
+      src: this.images[this.current]?.src,
+      component: 'home'
+    })
     this.restartAutoplayIfNeeded();
   }
 
@@ -166,6 +177,11 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
     } else if (this.loop) {
       this.current = this.images.length - 1;
     }
+    this.ga.event('carousel_prev', {
+      index: this.current,
+      src: this.images[this.current]?.src,
+      component: 'home'
+    })
     this.restartAutoplayIfNeeded();
   }
 
@@ -173,6 +189,11 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
     if (i < 0 || i >= this.images.length) return;
     this.current = i;
     this.restartAutoplayIfNeeded();
+    this.ga.event('carousel_go_to', {
+      index: this.current,
+      src: this.images[this.current]?.src,
+      component: 'home'
+    });
   }
 
   // Autoplay

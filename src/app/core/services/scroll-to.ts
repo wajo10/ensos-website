@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {filter} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
+import {AppAnalytics} from './analytics';
 
 const NAV_OFFSET = 86;
 
@@ -8,9 +9,16 @@ const NAV_OFFSET = 86;
   providedIn: 'root'
 })
 export class ScrollTo {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private ga: AppAnalytics) {}
 
-  async go(fragment: string, useOffset = true) {
+  async go(fragment: string, useOffset = true, from:string | null = null) {
+    if (from) {
+      this.ga.event('scroll_to', {
+        category: 'navigation',
+        from,
+        to: fragment
+      });
+    }
     const baseUrl = this.router.url.split('#')[0]; // ruta sin fragmento
 
     const scrollToId = (id: string) => {

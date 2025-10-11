@@ -7,6 +7,7 @@ import {MatIconRegistry} from '@angular/material/icon';
 import { TranslateService } from '@ngx-translate/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs';
+import {AppAnalytics} from './core/services/analytics';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ export class App {
                private domSanitizer: DomSanitizer,
                private translate: TranslateService,
                private router: Router,
+               private ga: AppAnalytics,
                @Inject(DOCUMENT) private document: Document,
                @Inject(PLATFORM_ID) private platformId: Object) {
     // if (isPlatformBrowser(this.platformId)) {
@@ -70,5 +72,13 @@ export class App {
       localStorage.setItem('lang', lang);
       this.document.documentElement.lang = lang;
     }
+  }
+  openWhatsApp() {
+    this.ga.event('click_outbound', {
+      category: 'outbound-whatsapp',
+      url: "https://wa.me/50663182593?text=Hola! Quiero obtener más información y realizar una reservación",
+      text: "Facebook"
+    });
+    window.open("https://wa.me/50663182593?text=Hola! Quiero obtener más información y realizar una reservación", '_blank', 'noopener');
   }
 }

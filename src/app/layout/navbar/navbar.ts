@@ -24,7 +24,10 @@ export class Navbar implements OnDestroy{
 
 
   private sub: Subscription;
-  constructor(theme: NavThemeService, private router: Router, private scrollService: ScrollTo) {
+  constructor(theme: NavThemeService,
+              private router: Router,
+              private scrollService: ScrollTo
+  ) {
     this.sub = theme.theme$.subscribe(t => {
       this.isDark = (t === 'dark');
       this.isLight = (t === 'light');
@@ -56,7 +59,7 @@ export class Navbar implements OnDestroy{
     this.closeMenu();
   }
   async go(fragment: string) {
-    await this.scrollService.go(fragment);
+    await this.scrollService.go(fragment, true, "navbar");
     this.closeMenu();
   }
 
