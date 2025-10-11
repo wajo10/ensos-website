@@ -36,30 +36,50 @@
   </div>
 
   <div class="footer-columns" id="contact">
-    <div class="footer-column first-column">
+    <div class="footer-column address-column desktop-only">
       <h3 class="footer-column-title">{{ "footer.address" | translate }}</h3>
       <p class="footer-column-item">San José, Escazú, San Rafael, Avenida Escazú, Locales C122 & C123</p>
       <p class="footer-column-item po-box">{{ "footer.po-box" | translate }} 209-1250</p>
       <p class="footer-column-item">{{ "footer.zip-code" | translate }} 10201</p>
 
-      <div class="a-buttons">
+      <div class="a-buttons desktop-only">
         <p><a (click)="openWaze()">Waze</a></p>
         <p><a (click)="openMaps()">Google Maps</a></p>
+        <p><a (click)="openUber()">Uber</a></p>
       </div>
     </div>
-    <div class="footer-column second-column">
+    <div class="footer-column schedule-column">
       <h3 class="footer-column-title">{{ "footer.open-hours" | translate }}</h3>
       <p class="footer-column-item">{{ "footer.open-hours-details" | translate }}</p>
     </div>
-    <div class="footer-column third-column">
+    <div class="footer-column links-column mobile-only">
+      <h3 class="footer-column-title">{{ "footer.find-us-on" | translate }}</h3>
+      <p><a (click)="openWaze()">Waze</a></p>
+      <p><a (click)="openMaps()">Google Maps</a></p>
+      <p><a (click)="openUber()">Uber</a></p>
+
+    </div>
+    <div class="footer-column contact-column">
       <h3 class="footer-column-title">{{ "footer.contact" | translate }}</h3>
       <a class="footer-column-item" href="tel:+50663182593">+ (506) 6318 - 2593</a>
       <a class="footer-column-item" href="mailto:ensorestaurante@gmail.com">{{'ensorestaurante@gmail.com'}}</a>
     </div>
-    <div class="footer-column fourth-column">
+    <div class="footer-column book-column">
       <h3 class="footer-column-title">{{ "footer.book-a-table" | translate }}</h3>
       <p class="footer-column-item">{{ "footer.book-details" | translate }}</p>
       <button class="golden" (click)="openReserve()"> {{ "footer.reserve-button" | translate }}</button>
+    </div>
+    <div class="footer-column address-column mobile-only">
+      <h3 class="footer-column-title">{{ "footer.address" | translate }}</h3>
+      <p class="footer-column-item">San José, Escazú, San Rafael, Avenida Escazú, Locales C122 & C123</p>
+      <p class="footer-column-item po-box">{{ "footer.po-box" | translate }} 209-1250</p>
+      <p class="footer-column-item">{{ "footer.zip-code" | translate }} 10201</p>
+
+      <div class="a-buttons desktop-only">
+        <p><a (click)="openWaze()">Waze</a></p>
+        <p><a (click)="openMaps()">Google Maps</a></p>
+        <p><a (click)="openUber()">Uber</a></p>
+      </div>
     </div>
 
     <div class="back-to-top" (click)="scrollToTop()">

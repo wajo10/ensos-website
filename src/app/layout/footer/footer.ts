@@ -55,4 +55,8 @@ export class Footer {
     window.open("https://wa.me/50663182593?text=Hola! Quiero obtener más información y realizar una reservación", '_blank', 'noopener');
   }
 
+  openUber(){
+    window.open("https://m.uber.com/ul/?client_id=fIjTzj60sDpayi82karQ3ZOfYOL8Z-c_&action=setPickup&pickup=my_location&dropoff%5Blatitude%5D=9.936353746140972&dropoff%5Blongitude%5D=-84.14325014255192", '_blank', 'noopener');
+  }
+
 }

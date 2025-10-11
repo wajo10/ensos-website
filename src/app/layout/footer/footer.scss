@@ -2,6 +2,14 @@
   background: var(--black-600);
 }
 
+.desktop-only{
+  display: block;
+}
+
+.mobile-only{
+  display: none !important;
+}
+
 .footer-logo{
   display: flex;
   flex-direction: column;
@@ -137,19 +145,19 @@ a:hover {
   color: var(--gold-500);
 }
 
-.first-column{
+.address-column{
   max-width: 235px;
 }
 
-.second-column{
+.schedule-column{
   max-width: 201px;
 }
 
-.third-column{
+.contact-column{
   max-width: 249px;
 }
 
-.fourth-column{
+.book-column{
   max-width: 265px;
 }
 
@@ -230,6 +238,12 @@ button.golden{
 }
 
 @media (max-width: 900px) {
+  .desktop-only{
+    display: none;
+  }
+  .mobile-only{
+    display: block !important;
+  }
   .footer-columns{
     flex-direction: column;
     align-items: flex-start;
@@ -258,24 +272,31 @@ button.golden{
     line-height: 24px;
   }
 
-  .first-column {
+  .address-column {
     max-width: 166px;
   }
 
-  .second-column {
+  .schedule-column {
     max-width: 151px;
   }
 
-  .third-column {
+  .contact-column {
     max-width: 187px;
   }
 
-  .fourth-column {
+  .book-column {
     max-width: 175px;
   }
 
-  .a-buttons{
-    display:none;
+  .links-column{
+    justify-content: left;
+    display: flex !important;
+    p> a{
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
   }
 
   .footer-bottom{
