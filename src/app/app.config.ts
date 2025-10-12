@@ -6,30 +6,42 @@ import {
   provideZonelessChangeDetection
 } from '@angular/core';
 import {provideRouter, withInMemoryScrolling} from '@angular/router';
-import { firebaseConfig } from '../environments/firebase-config';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import {provideTranslateService, TranslateLoader} from '@ngx-translate/core';
 import {provideTranslateHttpLoader} from '@ngx-translate/http-loader';
 import {provideHttpClient, withFetch} from '@angular/common/http';
-import { initializeApp } from 'firebase/app';
+import { Router, NavigationEnd } from '@angular/router';
 import {isPlatformBrowser} from '@angular/common';
+import {filter} from 'rxjs';
 
 
 function initFirebaseAnalytics() {
+  const router = inject(Router);
   const platformId = inject(PLATFORM_ID);
 
   return async () => {
     if (!isPlatformBrowser(platformId)) return;
 
-    const app = initializeApp(firebaseConfig);
+    const { firebaseConfig } = await import('../environments/firebase-config');
+    const { getApps, initializeApp } = await import('firebase/app');
+    const app = getApps()[0] ?? initializeApp(firebaseConfig);
 
-    // Importa analytics dinámicamente para no cargarlo en SSR
-    const { getAnalytics, isSupported, setAnalyticsCollectionEnabled } = await import('firebase/analytics');
+    const { getAnalytics, isSupported, setAnalyticsCollectionEnabled, logEvent } =
+      await import('firebase/analytics');
 
     if (await isSupported()) {
       const analytics = getAnalytics(app);
       setAnalyticsCollectionEnabled(analytics, true);
+
+      // page_view en cada navegación SPA
+      router.events.pipe(filter(e => e instanceof NavigationEnd)).subscribe(() => {
+        logEvent(analytics, 'page_view', {
+          page_location: location.href,
+          page_path: location.pathname + location.search + location.hash,
+          page_title: document.title
+        });
+      });
     }
   };
 }

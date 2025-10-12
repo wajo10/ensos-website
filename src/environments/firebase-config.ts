@@ -1,11 +1,9 @@
-import { readEnv } from './env';
-
 export const firebaseConfig = {
-  apiKey: readEnv('NG_APP_FIREBASE_API_KEY'),
-  authDomain: readEnv('NG_APP_FIREBASE_AUTH_DOMAIN'),
-  projectId: readEnv('NG_APP_FIREBASE_PROJECT_ID'),
-  storageBucket: readEnv('NG_APP_FIREBASE_STORAGE_BUCKET'),
-  messagingSenderId: readEnv('NG_APP_FIREBASE_MESSAGING_SENDER_ID'),
-  appId: readEnv('NG_APP_FIREBASE_APP_ID'),
-  measurementId: readEnv('NG_APP_FIREBASE_MEASUREMENT_ID'),
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY ?? 'AIzaSyD-LlcQLYYecgafYjIS9XQCEeaWDe_0uIw',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN ?? 'enso-restaurante.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID ?? 'enso-restaurante',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET ?? 'enso-restaurante.appspot.com',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID ?? '871441947825',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID ?? '1:871441947825:web:788c7d27d06944dc621690',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID ?? 'G-2HZMPDPTWT',
 } as const;
