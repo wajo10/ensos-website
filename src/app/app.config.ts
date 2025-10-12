@@ -6,7 +6,7 @@ import {
   provideZonelessChangeDetection
 } from '@angular/core';
 import {provideRouter, withInMemoryScrolling} from '@angular/router';
-
+import { firebaseConfig } from '../environments/firebase-config';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import {provideTranslateService, TranslateLoader} from '@ngx-translate/core';
@@ -15,15 +15,6 @@ import {provideHttpClient, withFetch} from '@angular/common/http';
 import { initializeApp } from 'firebase/app';
 import {isPlatformBrowser} from '@angular/common';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD-LlcQLYYecgafYjIS9XQCEeaWDe_0uIw",
-  authDomain: "enso-restaurante.firebaseapp.com",
-  projectId: "enso-restaurante",
-  storageBucket: "enso-restaurante.firebasestorage.app",
-  messagingSenderId: "871441947825",
-  appId: "1:871441947825:web:788c7d27d06944dc621690",
-  measurementId: "G-2HZMPDPTWT"
-};
 
 function initFirebaseAnalytics() {
   const platformId = inject(PLATFORM_ID);

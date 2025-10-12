@@ -1,17 +1,9 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import {firebaseConfig} from '../../../environments/firebase-config';
 
 type GaParams = Record<string, any>;
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD-LlcQLYYecgafYjIS9XQCEeaWDe_0uIw",
-  authDomain: "enso-restaurante.firebaseapp.com",
-  projectId: "enso-restaurante",
-  storageBucket: "enso-restaurante.firebasestorage.app",
-  messagingSenderId: "871441947825",
-  appId: "1:871441947825:web:788c7d27d06944dc621690",
-  measurementId: "G-2HZMPDPTWT"
-};
 
 @Injectable({ providedIn: 'root' })
 export class AppAnalytics {
