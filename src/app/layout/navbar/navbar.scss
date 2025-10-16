@@ -69,6 +69,13 @@
   font-weight: 400;
   font-size: 15px;
 }
+nav-link.image{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--gold-500);
@@ -76,6 +83,44 @@
 
 .golden{
   color: var(--gold-400)
+}
+
+// Desktop Overlay Menu
+.desktop-overlay {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: min(25vw, 300px);
+  background: rgba(0,0,0,0.96);
+  height: calc(100dvh - 86px);
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 580ms ease, opacity 580ms ease;
+  z-index: 999;
+  will-change: transform;
+}
+
+:host.desktop-menu-open .desktop-overlay {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.desktop-overlay-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 32px;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.close-button {
+  margin-top: 16px;
+  margin-left: 16px;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -153,6 +198,24 @@
   gap:64px;
   margin-bottom: 32px;
   margin-left: 20px;
+}
+
+.divider{
+  width: 95%;
+  height: 1px;
+  background: var(--white-500);
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+.language{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {

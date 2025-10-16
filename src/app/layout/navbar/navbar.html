@@ -13,26 +13,58 @@
       </a>
     </div>
 
-    <!-- Right (Right to Left) -->
+    <!-- Right -->
     <div class="nav-right">
       <a class="nav-link desktop" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
-      <a class="nav-link desktop golden" (click)="openReserve()">{{ "navbar.reservations" | translate }}</a>
+      <a class="nav-link desktop" (click)="openReserve()">{{ "navbar.reservations" | translate }}</a>
+      <a class="nav-link menu desktop image golden" (click)="toggleDesktopMenu()" data-menu-toggle>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <rect width="18" height="18" fill="url(#pattern0_800_21)"/>
+        <defs>
+          <pattern id="pattern0_800_21" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_800_21" transform="scale(0.01)"/>
+          </pattern>
+          <image id="image0_800_21" width="100" height="100" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+        </defs>
+      </svg>
+      </a>
       <button
         class="hamburger"
         type="button"
-        [attr.aria-expanded]="menuOpen"
-        [attr.aria-label]="menuOpen ? 'Close menu' : 'Open menu'"
+        [attr.aria-expanded]="mobileMenuOpen"
+        [attr.aria-label]="mobileMenuOpen ? 'Close menu' : 'Open menu'"
         aria-controls="mobileMenu"
-        (click)="toggleMenu()">
+        (click)="toggleMobileMenu()"
+        data-menu-toggle>
         <span></span><span></span><span></span>
       </button>
+    </div>
+  </div>
+  <!-- Desktop Menu Overlay -->
+  <div
+    class="desktop-overlay"
+    id="desktopMenu"
+    [attr.aria-hidden]="!desktopMenuOpen"
+    (click)="closeMenu()"
+    data-menu-root>
+    <div class="desktop-overlay__content" >
+      <div class="close-button" (click)="closeMenu()" data-menu-close>
+        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+          <path d="M1 1L8 8" stroke="#F7F5F0"/>
+          <path d="M1 8L8 1" stroke="#F7F5F0"/>
+        </svg>
+      </div>
+      <div class="desktop-overlay-container">
+        <a class="nav-link mobile" [class.golden]="currentLang.toLowerCase().includes('en')" (click)="setLanguage('en')">{{ "English" | translate }}</a>
+        <a class="nav-link mobile" [class.golden]="currentLang.toLowerCase().includes('es')" (click)="setLanguage('es')">{{ "Español" | translate }}</a>
+      </div>
     </div>
   </div>
   <!-- Mobile Menu Overlay -->
   <div
     class="mobile-overlay"
     id="mobileMenu"
-    [attr.aria-hidden]="!menuOpen"
+    [attr.aria-hidden]="!mobileMenuOpen"
     (click)="closeMenu()">
     <div class="mobile-overlay__content" (click)="$event.stopPropagation()">
       <div class="overlay-container">
@@ -40,6 +72,14 @@
         <a class="nav-link mobile" (click)="go('contact')">{{ "navbar.contact" | translate }}</a>
         <a class="nav-link mobile" routerLink="/menu">{{ "navbar.menu" | translate }}</a>
         <a class="nav-link mobile golden" (click)="openReserve()">{{ "navbar.reservations" | translate }}</a>
+        <div>
+          <div class="divider"></div>
+          <div class="language">
+            <a class="nav-link mobile" [class.golden]="currentLang.toLowerCase().includes('en')" (click)="setLanguage('en')">{{ "English" | translate }}</a>
+            <a class="nav-link mobile" [class.golden]="currentLang.toLowerCase().includes('es')" (click)="setLanguage('es')">{{ "Español" | translate }}</a>
+          </div>
+        </div>
+
       </div>
 
     </div>
