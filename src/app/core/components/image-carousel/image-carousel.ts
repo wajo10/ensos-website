@@ -48,7 +48,7 @@ export class ImageCarousel implements AfterViewInit, OnDestroy {
   private startX = 0;
   private startY = 0;
   private startTime = 0;
-  private width = 1;            // ancho del carrusel para convertir px->%
+  private width = 1;
   private axisLocked: 'x' | 'y' | null = null;
   private dragOffsetPx = 0;
 
